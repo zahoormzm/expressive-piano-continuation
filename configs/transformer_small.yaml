@@ -1,0 +1,23 @@
+name: transformer-small-pilot
+seed: 42
+device: cuda
+precision: bf16
+deterministic: false
+data:
+  token_summary: outputs/tokenization-summary.json
+  manifest: data/manifests/maestro-v3-clean.jsonl
+model:
+  kind: transformer
+  width: 512
+  layers: 8
+  heads: 8
+  feedforward: 1536
+  dropout: 0.1
+  tied_embeddings: true
+  gradient_checkpointing: false
+training:
+  context_length: 2048
+  microbatch: 1
+  accumulation: 16
+  token_budget: 5000000
+

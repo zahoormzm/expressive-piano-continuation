@@ -1,0 +1,769 @@
+{
+  "application_ready": true,
+  "application_url": "http://127.0.0.1:8767/",
+  "checks": {
+    "browser_combined_and_continuation_playback_passed": true,
+    "browser_console_errors": [],
+    "browser_midi_download_matches_job_bytes": true,
+    "browser_reload_restores_result": true,
+    "dependencies_changed": false,
+    "full_configuration_resolution_passed": true,
+    "javascript_syntax_passed": true,
+    "missing_file_error_and_source_change_recovery_passed": true,
+    "pilot_summary_byte_identical_to_cached_pilot_artifact": true,
+    "pip_check_passed": true,
+    "pytest_passed": 39,
+    "real_aria_demo_generation_passed": true,
+    "real_transformer_upload_generation_passed": true,
+    "ruff_format_passed": true,
+    "ruff_lint_passed": true,
+    "selected_job_midi_and_wav_hashes_rechecked": true,
+    "switching_players_pauses_other_player": true,
+    "visual_layout_inspected": true,
+    "wheel_contains_current_interface_html": true
+  },
+  "date": "2026-10-06",
+  "deadline": "2026-10-13",
+  "full_cache": {
+    "summary": {
+      "augmentation": "none",
+      "cache_directory": "data\\tokens\\c8ad763cae79f391",
+      "failures": [],
+      "index_file": "index-fac385b0854fd132-all.jsonl",
+      "limited_pilot": false,
+      "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+      "notes_removed_by_normalization": 0,
+      "performance_totals_by_split": {
+        "test": 171,
+        "train": 957,
+        "validation": 134
+      },
+      "reconstruction_examples": [],
+      "selected_performances": 1262,
+      "token_totals_by_split": {
+        "test": 2189119,
+        "train": 17056047,
+        "validation": 1919535
+      },
+      "tokenized_performances": 1262,
+      "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+      "vocab_size": 17727,
+      "windowing": "one cache per performance; trainer samples complete-event windows"
+    },
+    "verification": {
+      "all_token_hashes_and_grammar_passed": true,
+      "complete": true,
+      "context_length": 2048,
+      "index": "data/tokens/c8ad763cae79f391/index-fac385b0854fd132-all.jsonl",
+      "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+      "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+      "normalization_notes_removed": 0,
+      "note_groups_by_split": {
+        "test": 724905,
+        "train": 5646553,
+        "validation": 635135
+      },
+      "performances_by_split": {
+        "test": 171,
+        "train": 957,
+        "validation": 134
+      },
+      "seconds": 20.338140100007877,
+      "test_scope": "Token-file integrity and event syntax only; no test crops, model fitting, or evaluation",
+      "token_file_bytes": 84820340,
+      "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+      "tokens_by_split": {
+        "test": 2189119,
+        "train": 17056047,
+        "validation": 1919535
+      },
+      "training_crop_checks_by_split": {
+        "train": 2871,
+        "validation": 402
+      }
+    }
+  },
+  "full_cache_ready": true,
+  "full_corpus_models_trained": false,
+  "full_training_configurations": [
+    "configs/lstm_full.yaml",
+    "configs/transformer_full.yaml"
+  ],
+  "human_musical_quality_evaluated": false,
+  "next": [
+    "Human reconstruction listening",
+    "Substantive full-corpus training",
+    "Multi-prompt and multi-seed comparisons",
+    "Integrate selected checkpoints and prepare submission"
+  ],
+  "observed_jobs": [
+    {
+      "directory": "outputs/app-jobs/003945cf87f54d81b7e0cf6552333279",
+      "job": {
+        "artifacts": {
+          "combined.mid": "/artifacts/003945cf87f54d81b7e0cf6552333279/combined.mid",
+          "combined.wav": "/artifacts/003945cf87f54d81b7e0cf6552333279/combined.wav",
+          "continuation.mid": "/artifacts/003945cf87f54d81b7e0cf6552333279/continuation.mid",
+          "continuation.wav": "/artifacts/003945cf87f54d81b7e0cf6552333279/continuation.wav",
+          "prompt.mid": "/artifacts/003945cf87f54d81b7e0cf6552333279/prompt.mid",
+          "prompt.wav": "/artifacts/003945cf87f54d81b7e0cf6552333279/prompt.wav",
+          "report.json": "/artifacts/003945cf87f54d81b7e0cf6552333279/report.json"
+        },
+        "completed_unix": 1791244596.2394168,
+        "created_unix": 1791244584.7603903,
+        "error": null,
+        "filename": "Demo arpeggio.mid",
+        "id": "003945cf87f54d81b7e0cf6552333279",
+        "result": {
+          "combined_audio_seconds": 22.952925170068028,
+          "generated_notes": 54,
+          "note_count_preserved": true,
+          "note_end_seconds": 11.96,
+          "prompt_notes": 36,
+          "prompt_preserved": true,
+          "sampling_seconds": 2.951181299984455,
+          "stop_reason": "time_horizon"
+        },
+        "settings": {
+          "min_p": 0.035,
+          "model": "aria",
+          "new_seconds": 12,
+          "prompt_seconds": 8,
+          "seed": 42,
+          "temperature": 0.98
+        },
+        "state": "complete"
+      },
+      "report": {
+        "audio": {
+          "combined": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "37c334697b8f257cb3e886a0e4da80c0c4451fe30e8b58e532604a6270a993a9",
+            "peak": 0.0389404296875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.009465405598231901,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 22.952925170068028,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "34402e953fdcc90c00cb74513c4c5737eb5777ccd1a502b4fba1e80e7e40e4a0"
+          },
+          "continuation": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "e1700046e9a1e92b1a869d95921d8782c080cdeafee3384d5369f474731d73d2",
+            "peak": 0.0389404296875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.009136269530223104,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 14.953650793650795,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "a108656a8d51d587ce480e35d6b3c5cff0d8604a8130e82e4c583572283ea810"
+          },
+          "prompt": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "peak": 0.038299560546875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008590334763311728,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 11.04108843537415,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c"
+          }
+        },
+        "device": "cuda",
+        "export": {
+          "combined": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 90,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\003945cf87f54d81b7e0cf6552333279\\generation\\combined.mid",
+            "serialization_passed": true,
+            "sha256": "37c334697b8f257cb3e886a0e4da80c0c4451fe30e8b58e532604a6270a993a9"
+          },
+          "continuation": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 54,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\003945cf87f54d81b7e0cf6552333279\\generation\\continuation.mid",
+            "serialization_passed": true,
+            "sha256": "e1700046e9a1e92b1a869d95921d8782c080cdeafee3384d5369f474731d73d2"
+          },
+          "continuation_first_onset_seconds": 0.0,
+          "continuation_note_end_seconds": 11.96,
+          "continuation_pitch_range": [
+            43,
+            72
+          ],
+          "export_eos_appended": true,
+          "note_count_preserved": true,
+          "prompt": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 36,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\003945cf87f54d81b7e0cf6552333279\\generation\\prompt.mid",
+            "serialization_passed": true,
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3"
+          },
+          "prompt_preserved": true
+        },
+        "generation_source_sha256": "9a8e7ae705983901633d9e3683a6bc8813ce9a277499626363937cdeeee38715",
+        "min_p": 0.035,
+        "model": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "peak_gpu_allocated_bytes": 1415142912,
+        "precision": "bf16",
+        "prompt": {
+          "boundary_ms": 8000,
+          "normalization": {
+            "implicit_initial_tempo_inserted": false,
+            "normalized_note_count": 36,
+            "note_records_changed_by_sustain_or_overlap": 0,
+            "removed_or_merged_notes": 0,
+            "source_note_count": 36,
+            "sustain_messages_consumed": 0
+          },
+          "notes_clipped_at_prompt_boundary": 0,
+          "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+          "prompt_notes": 36,
+          "prompt_tokens": 111,
+          "requested_prompt_seconds": 8.0,
+          "simultaneous_note_order": "quantized MIDI parser order",
+          "source": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\003945cf87f54d81b7e0cf6552333279\\input.mid",
+          "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+        },
+        "protocol": "shared constrained decoding; native upstream sampler is not used",
+        "quality_evaluated": false,
+        "sampling": {
+          "constraints": {
+            "duplicate_pitch_at_same_onset": "forbidden",
+            "max_simultaneous_note_groups": 32,
+            "monotonic_onsets": true,
+            "new_note_onsets_ms": [
+              8000,
+              20000
+            ],
+            "pitch_range": [
+              21,
+              108
+            ],
+            "positive_velocity_and_duration": true
+          },
+          "generated_note_groups": 54,
+          "new_tokens": 165,
+          "sampled_eos": false,
+          "sampling": "shared syntax/range/density constraints, temperature and min_p",
+          "stop_reason": "time_horizon"
+        },
+        "sampling_seconds": 2.951181299984455,
+        "seed": 42,
+        "temperature": 0.98,
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+      }
+    },
+    {
+      "directory": "outputs/app-jobs/6f6cad24897e45fca2b096dfe62a226a",
+      "job": {
+        "artifacts": {
+          "combined.mid": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/combined.mid",
+          "combined.wav": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/combined.wav",
+          "continuation.mid": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/continuation.mid",
+          "continuation.wav": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/continuation.wav",
+          "prompt.mid": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/prompt.mid",
+          "prompt.wav": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/prompt.wav",
+          "report.json": "/artifacts/6f6cad24897e45fca2b096dfe62a226a/report.json"
+        },
+        "completed_unix": 1791252115.7588933,
+        "created_unix": 1791252104.9872396,
+        "error": null,
+        "filename": "Demo arpeggio.mid",
+        "id": "6f6cad24897e45fca2b096dfe62a226a",
+        "result": {
+          "combined_audio_seconds": 22.952925170068028,
+          "generated_notes": 54,
+          "note_count_preserved": true,
+          "note_end_seconds": 11.96,
+          "prompt_notes": 36,
+          "prompt_preserved": true,
+          "sampling_seconds": 2.7470275000086986,
+          "stop_reason": "time_horizon"
+        },
+        "settings": {
+          "min_p": 0.035,
+          "model": "aria",
+          "new_seconds": 12,
+          "prompt_seconds": 8,
+          "seed": 42,
+          "temperature": 0.98
+        },
+        "state": "complete"
+      },
+      "report": {
+        "audio": {
+          "combined": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "37c334697b8f257cb3e886a0e4da80c0c4451fe30e8b58e532604a6270a993a9",
+            "peak": 0.0389404296875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.009465405598231901,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 22.952925170068028,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "34402e953fdcc90c00cb74513c4c5737eb5777ccd1a502b4fba1e80e7e40e4a0"
+          },
+          "continuation": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "e1700046e9a1e92b1a869d95921d8782c080cdeafee3384d5369f474731d73d2",
+            "peak": 0.0389404296875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.009136269530223104,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 14.953650793650795,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "a108656a8d51d587ce480e35d6b3c5cff0d8604a8130e82e4c583572283ea810"
+          },
+          "prompt": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "peak": 0.038299560546875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008590334763311728,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 11.04108843537415,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c"
+          }
+        },
+        "device": "cuda",
+        "export": {
+          "combined": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 90,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\6f6cad24897e45fca2b096dfe62a226a\\generation\\combined.mid",
+            "serialization_passed": true,
+            "sha256": "37c334697b8f257cb3e886a0e4da80c0c4451fe30e8b58e532604a6270a993a9"
+          },
+          "continuation": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 54,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\6f6cad24897e45fca2b096dfe62a226a\\generation\\continuation.mid",
+            "serialization_passed": true,
+            "sha256": "e1700046e9a1e92b1a869d95921d8782c080cdeafee3384d5369f474731d73d2"
+          },
+          "continuation_first_onset_seconds": 0.0,
+          "continuation_note_end_seconds": 11.96,
+          "continuation_pitch_range": [
+            43,
+            72
+          ],
+          "export_eos_appended": true,
+          "note_count_preserved": true,
+          "prompt": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 36,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\6f6cad24897e45fca2b096dfe62a226a\\generation\\prompt.mid",
+            "serialization_passed": true,
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3"
+          },
+          "prompt_preserved": true
+        },
+        "generation_source_sha256": "289f32e05e48cff6d5415f9718ec154df30f94325dac206d91dd4f1b5d8ce1d0",
+        "min_p": 0.035,
+        "model": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "peak_gpu_allocated_bytes": 1415142912,
+        "precision": "bf16",
+        "prompt": {
+          "boundary_ms": 8000,
+          "normalization": {
+            "implicit_initial_tempo_inserted": false,
+            "normalized_note_count": 36,
+            "note_records_changed_by_sustain_or_overlap": 0,
+            "removed_or_merged_notes": 0,
+            "source_note_count": 36,
+            "sustain_messages_consumed": 0
+          },
+          "notes_clipped_at_prompt_boundary": 0,
+          "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+          "prompt_notes": 36,
+          "prompt_tokens": 111,
+          "requested_prompt_seconds": 8.0,
+          "simultaneous_note_order": "quantized MIDI parser order",
+          "source": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\6f6cad24897e45fca2b096dfe62a226a\\input.mid",
+          "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+        },
+        "protocol": "shared constrained decoding; native upstream sampler is not used",
+        "quality_evaluated": false,
+        "sampling": {
+          "constraints": {
+            "duplicate_pitch_at_same_onset": "forbidden",
+            "max_simultaneous_note_groups": 32,
+            "monotonic_onsets": true,
+            "new_note_onsets_ms": [
+              8000,
+              20000
+            ],
+            "pitch_range": [
+              21,
+              108
+            ],
+            "positive_velocity_and_duration": true
+          },
+          "generated_note_groups": 54,
+          "new_tokens": 165,
+          "sampled_eos": false,
+          "sampling": "shared syntax/range/density constraints, temperature and min_p",
+          "stop_reason": "time_horizon"
+        },
+        "sampling_seconds": 2.7470275000086986,
+        "seed": 42,
+        "temperature": 0.98,
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+      }
+    },
+    {
+      "directory": "outputs/app-jobs/9457a176b973428fad6857d4666b7dcc",
+      "job": {
+        "artifacts": {
+          "combined.mid": "/artifacts/9457a176b973428fad6857d4666b7dcc/combined.mid",
+          "combined.wav": "/artifacts/9457a176b973428fad6857d4666b7dcc/combined.wav",
+          "continuation.mid": "/artifacts/9457a176b973428fad6857d4666b7dcc/continuation.mid",
+          "continuation.wav": "/artifacts/9457a176b973428fad6857d4666b7dcc/continuation.wav",
+          "prompt.mid": "/artifacts/9457a176b973428fad6857d4666b7dcc/prompt.mid",
+          "prompt.wav": "/artifacts/9457a176b973428fad6857d4666b7dcc/prompt.wav",
+          "report.json": "/artifacts/9457a176b973428fad6857d4666b7dcc/report.json"
+        },
+        "completed_unix": 1791251823.1871176,
+        "created_unix": 1791251814.196487,
+        "error": null,
+        "filename": "arpeggio.mid",
+        "id": "9457a176b973428fad6857d4666b7dcc",
+        "result": {
+          "combined_audio_seconds": 23.54503401360544,
+          "generated_notes": 76,
+          "note_count_preserved": true,
+          "note_end_seconds": 12.1,
+          "prompt_notes": 36,
+          "prompt_preserved": true,
+          "sampling_seconds": 2.5810629000188783,
+          "stop_reason": "time_horizon"
+        },
+        "settings": {
+          "min_p": 0.035,
+          "model": "transformer",
+          "new_seconds": 12,
+          "prompt_seconds": 8,
+          "seed": 42,
+          "temperature": 0.98
+        },
+        "state": "complete"
+      },
+      "report": {
+        "audio": {
+          "combined": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "4bdfca5a7c2078ad080d4f6e9f0a8dc75ae2e84559ea470a2a0ef02a9a6854c8",
+            "peak": 0.197357177734375,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008919929710108864,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 23.54503401360544,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "1fcde788dcfd77c69bef0a9e8e7417523dbf14093a329cab967f231671f85172"
+          },
+          "continuation": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "33a5c2f30403af4599d732997e600d4cd9e5228e35cd2584cd92968105408b48",
+            "peak": 0.193634033203125,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008367000448057405,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 15.545759637188208,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "0002b12d7de2aa97be43e853458b4aedb2bba3d59a973bc0a7accd15e8802163"
+          },
+          "prompt": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "peak": 0.038299560546875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008590334763311728,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 11.04108843537415,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c"
+          }
+        },
+        "device": "cuda",
+        "export": {
+          "combined": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 3,
+            "notes": 112,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\9457a176b973428fad6857d4666b7dcc\\generation\\combined.mid",
+            "serialization_passed": true,
+            "sha256": "4bdfca5a7c2078ad080d4f6e9f0a8dc75ae2e84559ea470a2a0ef02a9a6854c8"
+          },
+          "continuation": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 76,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\9457a176b973428fad6857d4666b7dcc\\generation\\continuation.mid",
+            "serialization_passed": true,
+            "sha256": "33a5c2f30403af4599d732997e600d4cd9e5228e35cd2584cd92968105408b48"
+          },
+          "continuation_first_onset_seconds": 1.45,
+          "continuation_note_end_seconds": 12.1,
+          "continuation_pitch_range": [
+            33,
+            90
+          ],
+          "export_eos_appended": true,
+          "note_count_preserved": true,
+          "prompt": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 36,
+            "notes_merged_on_export": 0,
+            "path": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\9457a176b973428fad6857d4666b7dcc\\generation\\prompt.mid",
+            "serialization_passed": true,
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3"
+          },
+          "prompt_preserved": true
+        },
+        "generation_source_sha256": "9a8e7ae705983901633d9e3683a6bc8813ce9a277499626363937cdeeee38715",
+        "min_p": 0.035,
+        "model": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-pilot-20261006-001\\best.pt",
+          "checkpoint_sha256": "9b20e12e8dc0f69b2c97f626096fe5fc353ab58915effd1116e603767dfbcfb5",
+          "checkpoint_source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 5030045,
+          "weights_modified": false
+        },
+        "peak_gpu_allocated_bytes": 198635520,
+        "precision": "bf16",
+        "prompt": {
+          "boundary_ms": 8000,
+          "normalization": {
+            "implicit_initial_tempo_inserted": false,
+            "normalized_note_count": 36,
+            "note_records_changed_by_sustain_or_overlap": 0,
+            "removed_or_merged_notes": 0,
+            "source_note_count": 36,
+            "sustain_messages_consumed": 0
+          },
+          "notes_clipped_at_prompt_boundary": 0,
+          "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+          "prompt_notes": 36,
+          "prompt_tokens": 111,
+          "requested_prompt_seconds": 8.0,
+          "simultaneous_note_order": "quantized MIDI parser order",
+          "source": "C:\\Users\\zahoo\\OneDrive\\Documents\\ChatGPT\\ML\\outputs\\app-jobs\\9457a176b973428fad6857d4666b7dcc\\input.mid",
+          "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+        },
+        "protocol": "shared constrained decoding; native upstream sampler is not used",
+        "quality_evaluated": false,
+        "sampling": {
+          "constraints": {
+            "duplicate_pitch_at_same_onset": "forbidden",
+            "max_simultaneous_note_groups": 32,
+            "monotonic_onsets": true,
+            "new_note_onsets_ms": [
+              8000,
+              20000
+            ],
+            "pitch_range": [
+              21,
+              108
+            ],
+            "positive_velocity_and_duration": true
+          },
+          "generated_note_groups": 76,
+          "new_tokens": 231,
+          "sampled_eos": false,
+          "sampling": "shared syntax/range/density constraints, temperature and min_p",
+          "stop_reason": "time_horizon"
+        },
+        "sampling_seconds": 2.5810629000188783,
+        "seed": 42,
+        "temperature": 0.98,
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+      }
+    }
+  ],
+  "package_check": {
+    "sha256": "d52ebf8c34c55cbc3dfb5ae2a110358d43d59566ab7c959ea20bd790b16e2ccd",
+    "wheel": "outputs/package-check/music_project-0.1.0-py3-none-any.whl"
+  },
+  "sources": [
+    {
+      "html_sha256": "06a0daee0bc5e3b2ad9f18ef7006968581e6497642a548d780debf157e55b20f",
+      "jobs": [
+        {
+          "id": "003945cf87f54d81b7e0cf6552333279",
+          "model": "aria",
+          "notes": 54,
+          "sampling_seconds": 2.951181299984455,
+          "source": "9a8e7ae705983901633d9e3683a6bc8813ce9a277499626363937cdeeee38715"
+        },
+        {
+          "id": "9457a176b973428fad6857d4666b7dcc",
+          "model": "transformer",
+          "notes": 76,
+          "sampling_seconds": 2.5810629000188783,
+          "source": "9a8e7ae705983901633d9e3683a6bc8813ce9a277499626363937cdeeee38715"
+        }
+      ],
+      "snapshot": "outputs/app-source-9a8e7ae705983901.zip",
+      "snapshot_sha256": "04b55410718bfdd122789597b9ad388551116267b7ea6e77eb4c5b41bf9419c0",
+      "source_sha256": "9a8e7ae705983901633d9e3683a6bc8813ce9a277499626363937cdeeee38715"
+    },
+    {
+      "html_sha256": "23f13ef6b31683928eeb4d21418985b1bcb2ad24d630e984c56f65c13f6e6d56",
+      "snapshot": "outputs/app-source-289f32e05e48cff6.zip",
+      "snapshot_sha256": "a7b2afa6c0495d81ae827cc7ec39768c8e1dda8e531cbb9004b5924fcf29c37b",
+      "source_sha256": "289f32e05e48cff6d5415f9718ec154df30f94325dac206d91dd4f1b5d8ce1d0"
+    }
+  ]
+}

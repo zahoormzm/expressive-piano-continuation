@@ -1,0 +1,83 @@
+{
+  "release_tag": "submission-2026-10-13",
+  "release_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/tag/submission-2026-10-13",
+  "repository": "zahoormzm/expressive-piano-continuation",
+  "private": true,
+  "assets": [
+    {
+      "name": "checkpoints-lstm-full-20261006-001.zip",
+      "bytes": 155053951,
+      "sha256": "949fd13994b670767a08393d19616631a0d4e146a7e19f027bcfd72b2c05d590",
+      "files": 8,
+      "purpose": "Complete saved run, including best/latest training checkpoints and recorded configuration/metrics.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/checkpoints-lstm-full-20261006-001.zip"
+    },
+    {
+      "name": "checkpoints-lstm-pilot-20261006-001.zip",
+      "bytes": 152943934,
+      "sha256": "03c3a733879d9f02f1b19201979788fe43b2cd5242467d46fb3ba6e9bb0e9fb3",
+      "files": 8,
+      "purpose": "Complete saved run, including best/latest training checkpoints and recorded configuration/metrics.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/checkpoints-lstm-pilot-20261006-001.zip"
+    },
+    {
+      "name": "checkpoints-transformer-continued-150m-20261008-001.zip",
+      "bytes": 869500177,
+      "sha256": "76035f324595b7b625b5bb196314f1207f6140f07ba624fc39fe2d7c372b4ab6",
+      "files": 8,
+      "purpose": "Complete saved run, including best/latest training checkpoints and recorded configuration/metrics.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/checkpoints-transformer-continued-150m-20261008-001.zip"
+    },
+    {
+      "name": "checkpoints-transformer-musical-160m-20261008-001.zip",
+      "bytes": 869758828,
+      "sha256": "5d617287e12a88b710251e91a99f434a639654693c389070c1cffeb0bc50fe55",
+      "files": 8,
+      "purpose": "Complete saved run, including best/latest training checkpoints and recorded configuration/metrics.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/checkpoints-transformer-musical-160m-20261008-001.zip"
+    },
+    {
+      "name": "checkpoints-transformer-small-full-20261006-001.zip",
+      "bytes": 869541185,
+      "sha256": "218b78f5640eaaf99be3c6a407d660590ac036f013c263ac31c084a620fcf35e",
+      "files": 8,
+      "purpose": "Complete saved run, including best/latest training checkpoints and recorded configuration/metrics.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/checkpoints-transformer-small-full-20261006-001.zip"
+    },
+    {
+      "name": "checkpoints-transformer-small-pilot-20261006-001.zip",
+      "bytes": 877509247,
+      "sha256": "f6ec40a9c8ac65977e413240d713b837dff1acf6df92f1a334013b4f41574761",
+      "files": 8,
+      "purpose": "Complete saved run, including best/latest training checkpoints and recorded configuration/metrics.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/checkpoints-transformer-small-pilot-20261006-001.zip"
+    },
+    {
+      "name": "data-preparation.zip",
+      "bytes": 37611647,
+      "sha256": "87409b83e7331af8c262580e3b160cff01ea5916eae0a8524ee83cb85ddaab6d",
+      "files": 1271,
+      "purpose": "Source manifests, versioned token caches and attribution. Raw MAESTRO MIDI can be downloaded from its official source.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/data-preparation.zip"
+    },
+    {
+      "name": "evidence-and-listening.zip",
+      "bytes": 541047873,
+      "sha256": "966bae29b19248ec186dbbe2912a01e3fd4bbb776ba8e7fe18f7fc5bec0681af",
+      "files": 2549,
+      "purpose": "Recorded diagnostics, source snapshots, all saved listening/generation outputs and provided feedback; ephemeral test/publishing caches are excluded.",
+      "download_url": "https://github.com/zahoormzm/expressive-piano-continuation/releases/download/submission-2026-10-13/evidence-and-listening.zip"
+    }
+  ],
+  "external_assets_config": "configs/assets.json",
+  "excluded_rebuildable_files": [
+    ".venv/",
+    ".third_party/",
+    "data/assets/",
+    "data/downloads/",
+    "data/maestro-v3.0.0/ MIDI files",
+    "temporary test/publishing caches"
+  ],
+  "external_assets_reason": "Official data/pretrained model/renderer downloads are checksum-pinned in project setup scripts. The 2.63 GB upstream Aria file remains an official download, not a release asset.",
+  "total_asset_bytes": 4372966842
+}

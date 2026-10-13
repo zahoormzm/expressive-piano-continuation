@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Piano continuation studio</title>
+  <style>
+    :root{color-scheme:light;--ink:#183039;--muted:#65767a;--green:#286956;--line:#dce3dd;--paper:#f3f4ef}
+    *{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,sans-serif}
+    header{background:#183039;color:#fff;padding:18px 6vw;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:650;letter-spacing:.02em}.local{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#bcd4c8}
+    main{max-width:1180px;margin:auto;padding:42px 24px 48px}.eyebrow{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);font-weight:650}
+    h1{font-size:clamp(32px,4.4vw,50px);line-height:1.1;letter-spacing:-.04em;margin:10px 0 16px}h2{font-size:22px;margin:0 0 16px}h3{font-size:16px;margin:0 0 8px}
+    p{color:var(--muted);margin:8px 0}.intro{max-width:700px}.workspace{display:grid;grid-template-columns:390px 1fr;gap:24px;margin-top:32px;align-items:start}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px}.form-card h2{font-size:20px}
+    fieldset{border:0;padding:0;margin:0;min-width:0}.source-options{display:flex;gap:10px;margin-bottom:18px}.source-option{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 8px;font-size:14px;cursor:pointer;background:#f8faf6}
+    .source-option:has(input:checked){background:#e5efe7;border-color:#85ae96}.source-option input{accent-color:var(--green);margin-right:5px}
+    label.field{display:block;font-size:13px;font-weight:600;margin:18px 0 6px}input,select,button{font:inherit}input[type=number],select{width:100%;border:1px solid #cbd6cd;border-radius:9px;padding:10px;background:white;color:var(--ink)}
+    input[type=file]{width:100%;font-size:13px;padding:12px 8px;border:1px dashed #9eb5a3;border-radius:10px;background:#f7faf6}input[type=file]::file-selector-button{padding:7px 10px;border:1px solid #cbd6cd;border-radius:7px;background:#fff;color:var(--ink);margin-right:8px;cursor:pointer}
+    .help{font-size:12px;margin-top:6px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.demo{background:#e7efe7;border-radius:10px;padding:16px;font-size:14px}.demo strong{display:block;margin-bottom:2px}
+    details.settings{border-top:1px solid var(--line);margin-top:22px;padding-top:15px;font-size:13px}summary{cursor:pointer;font-weight:600}.settings .two label{margin-top:14px}
+    .primary{width:100%;margin-top:24px;background:var(--green);color:#fff;border:0;border-radius:10px;padding:13px 18px;font-weight:600;cursor:pointer}.primary:hover{background:#1c5746}.primary:disabled{cursor:wait;opacity:.55}
+    .status{margin-top:14px;display:flex;align-items:center;gap:10px;font-size:14px;color:var(--green);min-height:24px}.spinner{width:16px;height:16px;border:2px solid #d1e3d6;border-top-color:var(--green);border-radius:50%;animation:spin 1s linear infinite;flex-shrink:0}@keyframes spin{to{transform:rotate(360deg)}}
+    .error{background:#fff2ed;border:1px solid #edc9bb;border-radius:10px;color:#853e2d;padding:13px;margin-top:16px;font-size:14px}.placeholder{min-height:390px;display:flex;align-items:center;justify-content:center;text-align:center;background:linear-gradient(135deg,#fff,#f5f8f3)}
+    .placeholder-inner{max-width:370px;padding:16px}.keys{display:flex;height:80px;width:225px;margin:0 auto 24px;border:1px solid #b9cbc0;border-radius:8px;overflow:hidden;background:#fff}.key{flex:1;border-right:1px solid #ccd7ce;position:relative}.key:last-child{border:0}.key.black::after{content:'';position:absolute;right:-7px;top:0;width:13px;height:48px;background:#233c35;border-radius:0 0 3px 3px;z-index:1}
+    .placeholder h2{margin-bottom:8px}.placeholder p{font-size:14px}.result-top{display:flex;justify-content:space-between;align-items:start;gap:12px}.badge{font-size:12px;padding:5px 10px;border-radius:20px;background:#e8f0e7;color:var(--green);white-space:nowrap}.result-sub{font-size:13px;overflow-wrap:anywhere}
+    .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:24px 0;border-bottom:1px solid var(--line);padding-bottom:22px}.metric strong{display:block;font-size:25px;line-height:1.2;font-weight:600}.metric span{font-size:12px;color:var(--muted)}
+    audio{width:100%;height:46px;margin:10px 0 4px}.audio-label{font-weight:600;font-size:14px}.downloads{display:flex;gap:12px;flex-wrap:wrap;margin:22px 0}.download{display:inline-block;background:var(--green);color:#fff;padding:10px 15px;border-radius:9px;text-decoration:none;font-size:14px;font-weight:550}.secondary{background:#edf3ec;color:var(--green)}a{color:var(--green);text-underline-offset:3px}
+    .parts{border-top:1px solid var(--line);padding-top:16px;font-size:13px}.parts .audio-label{display:block;margin-top:16px}.integrity{font-size:13px;background:#f0f5ee;border-radius:10px;padding:14px;margin-top:16px}.report-link{font-size:12px;margin-top:15px;display:inline-block}.notes{font-size:12px;border-top:1px solid var(--line);margin-top:30px;padding-top:18px;max-width:900px}
+    [hidden]{display:none!important}:focus-visible{outline:3px solid #a2c7b3;outline-offset:3px}@media(max-width:850px){.workspace{grid-template-columns:1fr}.form-card{max-width:none}.placeholder{min-height:270px}}@media(max-width:520px){main{padding:28px 16px}.card{padding:21px}.local{display:none}.metrics{gap:8px}.metric strong{font-size:22px}.result-top{display:block}.badge{display:inline-block;margin-bottom:10px}}
+    @media(prefers-reduced-motion:reduce){.spinner{animation:none}}
+  </style>
+</head>
+<body>
+  <header><span class="brand">♩ Piano continuation studio</span><span class="local">Runs on your computer</span></header>
+  <main>
+    <div class="eyebrow">From a starting idea to a new phrase</div>
+    <h1>Give your piano idea<br>somewhere to go.</h1>
+    <p class="intro">Start with a piano MIDI, choose a model, and hear what comes next. Save the continuation as editable MIDI or piano audio.</p>
+    <div class="workspace">
+      <section class="card form-card" aria-label="Generation settings">
+        <h2>Your starting idea</h2>
+        <form id="generation-form">
+          <fieldset id="controls">
+            <div class="source-options">
+              <label class="source-option"><input type="radio" name="source" value="demo" checked>Try the demo</label>
+              <label class="source-option"><input type="radio" name="source" value="upload">Upload MIDI</label>
+            </div>
+            <div id="demo-info" class="demo"><strong>A simple piano arpeggio</strong><span>Eight seconds, four chords, one starting idea.</span></div>
+            <div id="upload-area" hidden>
+              <label class="field" for="midi-file">Piano MIDI file</label>
+              <input id="midi-file" type="file" accept=".mid,.midi,audio/midi">
+              <p class="help">Solo piano · .mid or .midi · up to 2 MB</p>
+            </div>
+            <label class="field" for="model">Continue with</label>
+            <select id="model" name="model"><option value="aria">Pretrained Aria</option><option value="transformer">Scratch Transformer pilot</option><option value="lstm">LSTM pilot</option></select>
+            <p class="help">Compare a scratch LSTM or Transformer with the pretrained Aria baseline.</p>
+            <div class="two">
+              <div><label class="field" for="prompt-seconds">Prompt length (seconds)</label><input id="prompt-seconds" type="number" min="1" max="30" step="1" value="8" required></div>
+              <div><label class="field" for="new-seconds">Continuation limit (seconds)</label><input id="new-seconds" type="number" min="1" max="30" step="1" value="12" required></div>
+            </div>
+            <p class="help">Use the opening of your file as the prompt. The continuation length is an upper limit; the model can finish earlier. A shorter prompt leaves more room for new music. Piano releases can extend beyond the limit.</p>
+            <details class="settings"><summary>Variation settings</summary>
+              <label class="field" for="seed">Random seed</label><input id="seed" type="number" min="0" max="4294967295" step="1" value="42" required>
+              <div class="two">
+                <div><label class="field" for="temperature">Temperature</label><input id="temperature" type="number" min="0" max="1.5" step="0.01" value="0.98" required></div>
+                <div><label class="field" for="min-p">Min-p</label><input id="min-p" type="number" min="0" max="1" step="0.005" value="0.035" required></div>
+              </div>
+              <p class="help">Change the seed to explore another continuation. Lower temperature makes sampling less varied.</p>
+            </details>
+            <button class="primary" id="generate" type="submit">Generate continuation</button>
+          </fieldset>
+        </form>
+        <div id="status" class="status" role="status" aria-live="polite"><span id="spinner" class="spinner" hidden></span><span id="status-text">Checking available models…</span></div>
+        <div id="error" class="error" role="alert" hidden></div>
+      </section>
+      <div>
+        <section id="placeholder" class="card placeholder" aria-label="Waiting for a continuation"><div class="placeholder-inner">
+          <div class="keys" aria-hidden="true"><div class="key black"></div><div class="key black"></div><div class="key"></div><div class="key black"></div><div class="key black"></div><div class="key black"></div><div class="key"></div></div>
+          <h2>A new phrase starts here.</h2><p>Try the demo first, or upload a piano idea of your own. Your audio and MIDI will appear here when generation finishes.</p>
+        </div></section>
+        <section id="result" class="card" aria-label="Generated continuation" hidden>
+          <div class="result-top"><div><h2 id="result-heading">Your continuation</h2><p id="result-description" class="result-sub"></p></div><span id="result-badge" class="badge">Ready to play</span></div>
+          <div class="metrics"><div class="metric"><strong id="note-count"></strong><span>new notes</span></div><div class="metric"><strong id="sample-time"></strong><span>seconds to sample</span></div><div class="metric"><strong id="audio-length"></strong><span id="audio-length-label">seconds of continuation audio</span></div></div>
+          <label class="audio-label" for="combined-audio">Your prompt + continuation</label><audio id="combined-audio" controls preload="metadata"></audio>
+          <p id="boundary-note" class="help"></p>
+          <p id="duration-note" class="help"></p>
+          <div class="downloads"><a id="full-midi" class="download" download>Download full MIDI</a><a id="continuation-midi" class="download secondary" download>Continuation MIDI</a><a id="full-audio" class="download secondary" download>Piano WAV</a></div>
+          <details class="parts"><summary>Listen to the parts separately</summary>
+            <label class="audio-label" for="prompt-audio">Prompt only</label><audio id="prompt-audio" controls preload="metadata"></audio>
+            <label class="audio-label" for="continuation-audio">Continuation only</label><audio id="continuation-audio" controls preload="metadata"></audio>
+            <a id="continuation-wav" download>Download continuation WAV</a>
+          </details>
+          <p id="integrity" class="integrity"></p><a id="report" class="report-link" download>Download generation details</a>
+        </section>
+      </div>
+    </div>
+    <p class="notes">Files and generation stay on this computer. MIDI timing and velocity are quantized for model input. Sustain becomes note lengths; other pedal controls are not retained. One generation runs at a time. These models and samples are still being evaluated.</p>
+  </main>
+  <script>
+    const $=id=>document.getElementById(id);
+    let running=false,healthy=false,jobId=null,watchTimer=null;
+    const stages={validating:'Checking your MIDI…',loading:'Loading the piano model…',generating:'Continuing your piano idea…',rendering:'Rendering piano audio…'};
+    const labels={aria:'Pretrained Aria',transformer:'Scratch Transformer pilot',lstm:'LSTM pilot'};
+    function status(text,busy=false){$('status-text').textContent=text;$('spinner').hidden=!busy;$('controls').disabled=busy;$('generate').disabled=busy||!healthy;}
+    function showError(message){$('error').textContent=message;$('error').hidden=false;}
+    async function api(path,options){const response=await fetch(path,options);const data=await response.json();if(!response.ok)throw new Error(data.error||'The request failed.');return data;}
+    function remember(id){try{localStorage.setItem('piano-last-job',id);}catch{}}
+    async function health(){if(running)return;try{const data=await api('/api/health');healthy=data.models.some(m=>m.available);for(const option of $('model').options){const model=data.models.find(m=>m.id===option.value);option.disabled=!model?.available;option.textContent=(model?.label||labels[option.value])+(option.disabled?' (unavailable)':'');}if($('model').selectedOptions[0]?.disabled){$('model').value=data.models.find(m=>m.available)?.id||'aria';}status(data.busy?(data.activity==='training'?'Training is using the GPU. Generation will be available when it finishes.':'The GPU is busy. Please wait for the current model job.'):healthy?'Ready when you are.':'No models are available. See the project setup instructions.');$('generate').disabled=data.busy||!healthy;}catch{healthy=false;status('The local server is unavailable. Restart it to generate.');}}
+    for(const radio of document.querySelectorAll('input[name=source]'))radio.addEventListener('change',()=>{const upload=radio.value==='upload'&&radio.checked;$('upload-area').hidden=!upload;$('demo-info').hidden=upload;$('error').hidden=true;});
+    $('midi-file').addEventListener('change',()=>{$('error').hidden=true;});
+    for(const player of document.querySelectorAll('audio'))player.addEventListener('play',()=>{for(const other of document.querySelectorAll('audio'))if(other!==player)other.pause();});
+    function render(job){
+      const r=job.result,a=job.artifacts;
+      $('placeholder').hidden=true;$('result').hidden=false;$('result-heading').textContent='Your continuation';$('result-badge').textContent='Ready to play';
+      $('result-description').textContent=(job.model_label||labels[job.settings.model])+' · '+job.filename+' · seed '+job.settings.seed;
+      $('note-count').textContent=r.generated_notes;$('sample-time').textContent=r.sampling_seconds.toFixed(2);
+      $('audio-length').textContent=(r.continuation_audio_seconds??r.combined_audio_seconds).toFixed(1);
+      $('audio-length-label').textContent=r.continuation_audio_seconds!=null?'seconds of continuation audio':'seconds of total audio';
+      for(const kind of ['combined','prompt','continuation']){$(kind+'-audio').pause();$(kind+'-audio').src=a[kind+'.wav'];}
+      for(const [id,file] of [['full-midi','combined.mid'],['continuation-midi','continuation.mid'],['full-audio','combined.wav'],['continuation-wav','continuation.wav'],['report','report.json']])$(id).href=a[file];
+      $('boundary-note').textContent='Generation begins at '+job.settings.prompt_seconds+' seconds. Piano releases add a tail after the final notes.';
+      let duration='Requested up to '+job.settings.new_seconds+' seconds of new music. The final generated note ends at '+r.note_end_seconds.toFixed(2)+' seconds after the prompt.';
+      if(r.stop_reason==='token_budget')duration+=r.generation_budget_mode==='fixed'?' This older result used a fixed '+r.generation_token_budget+'-token cap. Generate again to use the available model context.':' Generation used all remaining model context. Shorten the prompt or try Aria for more room.';
+      else if(r.stop_reason==='sampled_eos')duration+=' The model chose to end the piece early. Try another seed for a different continuation.';
+      else duration+=' The model reached the requested onset limit; note releases can extend later.';
+      $('duration-note').textContent=duration;
+      $('integrity').textContent='Your '+r.prompt_notes+' quantized starting notes and all '+r.generated_notes+' new notes passed the MIDI export checks.';
+    }
+    async function watch(){try{const job=await api('/api/jobs/'+jobId);if(job.state==='complete'){running=false;render(job);status('Your continuation is ready.');return;}if(job.state==='failed'){running=false;status('Generation stopped.');showError(job.error||'Generation failed.');return;}status(stages[job.state]||'Working on your continuation…',true);watchTimer=setTimeout(watch,1000);}catch(error){running=false;status('Could not check the generation.');showError(error.message);}}
+    $('generation-form').addEventListener('submit',async event=>{event.preventDefault();if(running)return;$('error').hidden=true;running=true;status('Checking your starting idea…',true);try{const demo=document.querySelector('input[name=source]:checked').value==='demo';const body={model:$('model').value,seed:Number($('seed').value),prompt_seconds:Number($('prompt-seconds').value),new_seconds:Number($('new-seconds').value),temperature:Number($('temperature').value),min_p:Number($('min-p').value),use_demo:demo};if(!demo){const file=$('midi-file').files[0];if(!file)throw new Error('Choose a piano MIDI file first.');if(file.size>2*1024*1024)throw new Error('MIDI files must be at most 2 MB.');body.filename=file.name;body.midi_base64=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result).split(',')[1]);reader.onerror=()=>reject(new Error('The MIDI file could not be read.'));reader.readAsDataURL(file);});}const job=await api('/api/jobs',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});jobId=job.id;remember(jobId);if(!$('result').hidden){$('result-heading').textContent='Previous continuation';$('result-badge').textContent='Previous sample';}if(watchTimer)clearTimeout(watchTimer);await watch();}catch(error){running=false;status('Ready to try again.');showError(error.message);}});
+    (async()=>{await health();try{jobId=localStorage.getItem('piano-last-job');}catch{}if(jobId){try{const job=await api('/api/jobs/'+jobId);if(job.state==='complete')render(job);else if(job.state!=='failed'){running=true;await watch();}}catch{}}})();
+    setInterval(health,5000);
+  </script>
+</body>
+</html>

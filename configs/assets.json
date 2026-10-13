@@ -1,0 +1,33 @@
+{
+  "fluidsynth": {
+    "version": "2.6.1",
+    "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.1/fluidsynth-v2.6.1-win10-x64-cpp11.zip",
+    "sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+    "path": "data/assets/fluidsynth-2.6.1.zip",
+    "directory": "data/assets/fluidsynth-2.6.1",
+    "license": "LGPL-2.1-or-later"
+  },
+  "soundfont": {
+    "version": "GeneralUser GS 2.0.3",
+    "revision": "684543d5e5efaef08d02be50dcda8d552478fa60",
+    "url": "https://raw.githubusercontent.com/mrbumpy409/GeneralUser-GS/684543d5e5efaef08d02be50dcda8d552478fa60/GeneralUser-GS.sf2",
+    "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+    "path": "data/assets/GeneralUser-GS-2.0.3.sf2",
+    "license_url": "https://raw.githubusercontent.com/mrbumpy409/GeneralUser-GS/684543d5e5efaef08d02be50dcda8d552478fa60/documentation/LICENSE.txt",
+    "license": "GeneralUser GS License v2.0"
+  },
+  "pretrained": {
+    "repository": "loubb/aria-medium-base",
+    "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+    "variant": "generation-finetuned, unmodified weights",
+    "url": "https://huggingface.co/loubb/aria-medium-base/resolve/5a1ef36c5007ee10fbe57d61d96725a7244bd2b2/model-gen.safetensors?download=true",
+    "sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+    "bytes": 2634170640,
+    "path": "data/assets/aria-medium-gen.safetensors",
+    "source_repository": "https://github.com/EleutherAI/aria.git",
+    "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+    "source_directory": ".third_party/aria",
+    "model_config": "config/models/medium.json",
+    "license": "Apache-2.0"
+  }
+}

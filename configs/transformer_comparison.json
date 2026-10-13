@@ -1,0 +1,19 @@
+{
+  "name": "transformer-100m-vs-continued-150m-20261008",
+  "prompt_seconds": 8,
+  "new_seconds": 12,
+  "max_new_tokens": "auto",
+  "temperature": 0.9,
+  "min_p": 0.035,
+  "seeds": [42, 43],
+  "prompts": [
+    {"id": "arpeggio", "path": "outputs/prompts/arpeggio.mid", "description": "Authored arpeggio"},
+    {"id": "melody", "path": "outputs/prompts/melody.mid", "description": "Authored melody with held accompaniment"},
+    {"id": "syncopation", "path": "outputs/prompts/syncopation.mid", "description": "Authored syncopated minor chords"},
+    {"id": "fur-elise", "path": "outputs/user-test-inputs/fur-elise-30s.mid", "description": "Prepared Für Elise excerpt (informal user input)"}
+  ],
+  "models": [
+    {"id": "baseline", "label": "Transformer · original 100M", "checkpoint": "runs/transformer-small-full-20261006-001/best.pt"},
+    {"id": "continued", "label": "Transformer · continued training", "checkpoint": "runs/transformer-continued-150m-20261008-001/best.pt"}
+  ]
+}

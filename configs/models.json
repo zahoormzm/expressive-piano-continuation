@@ -1,0 +1,14 @@
+{
+  "aria": {
+    "label": "Pretrained Aria",
+    "checkpoint": null
+  },
+  "transformer": {
+    "label": "Transformer · musical fine-tuning",
+    "checkpoint": "runs/transformer-musical-160m-20261008-001/latest.pt"
+  },
+  "lstm": {
+    "label": "LSTM · full corpus",
+    "checkpoint": "runs/lstm-full-20261006-001/best.pt"
+  }
+}

@@ -1,0 +1,1570 @@
+{
+  "date": "2026-10-06",
+  "generation_source": {
+    "earlier_startup_failure": "outputs/full-generation-startup-ae5d43dc39533393/failure.json",
+    "frozen_directory": "outputs/full-generation-code-be011d138b141641",
+    "includes_model_registry_and_tests": true,
+    "snapshot": "outputs/full-generation-source-be011d138b141641.zip",
+    "snapshot_sha256": "258fb2313ca8a7d5f5aff2e872c8b36204c456835a98ddefc06a605c5bcd8958",
+    "source_sha256": "be011d138b141641f9612bd886cc10d29264bb094baaec2caaebd2a05d7bbee7"
+  },
+  "generation_suite": {
+    "attempts": [
+      {
+        "continuation_note_end_seconds": 12.0,
+        "continuation_pitch_range": [
+          41,
+          82
+        ],
+        "description": "Authored arpeggio",
+        "directory": "outputs\\full-generation\\arpeggio-lstm-seed42",
+        "generated_notes": 123,
+        "label": "LSTM · full corpus",
+        "log": "outputs\\full-generation\\arpeggio-lstm-seed42.log",
+        "max_note_end_adjustment_ms": 10,
+        "model": "lstm",
+        "model_identity": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 1,
+        "peak_gpu_allocated_bytes": 84010496,
+        "prompt": "arpeggio",
+        "report_sha256": "508528fcd8df574fc6186ff7818d7c0838bc8e593e383b37f7eff4d2d96badb4",
+        "sampled_tokens_sha256": "54632b6fdea7da475395e57490576f6ee5da5122f765298f5230d157373c60e2",
+        "sampling_seconds": 1.0297103999764659,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 3.503683299990371
+      },
+      {
+        "continuation_note_end_seconds": 12.17,
+        "continuation_pitch_range": [
+          43,
+          72
+        ],
+        "description": "Authored arpeggio",
+        "directory": "outputs\\full-generation\\arpeggio-transformer-seed42",
+        "generated_notes": 69,
+        "label": "Scratch Transformer · full corpus",
+        "log": "outputs\\full-generation\\arpeggio-transformer-seed42.log",
+        "max_note_end_adjustment_ms": 1400,
+        "model": "transformer",
+        "model_identity": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 8,
+        "peak_gpu_allocated_bytes": 198592000,
+        "prompt": "arpeggio",
+        "report_sha256": "c9ed0205551611d4e17b5bebab1e100e54c5119ea0b2d412c0845b2f3de26660",
+        "sampled_tokens_sha256": "24acdbe11c2cdcec71d46ae6b54384a8ee9cf133700f9fcf1c7e5b73acb843b5",
+        "sampling_seconds": 1.9123661000048742,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 3.9638823000132106
+      },
+      {
+        "continuation_note_end_seconds": 11.96,
+        "continuation_pitch_range": [
+          43,
+          72
+        ],
+        "description": "Authored arpeggio",
+        "directory": "outputs\\full-generation\\arpeggio-aria-seed42",
+        "generated_notes": 54,
+        "label": "Pretrained Aria",
+        "log": "outputs\\full-generation\\arpeggio-aria-seed42.log",
+        "max_note_end_adjustment_ms": 0,
+        "model": "aria",
+        "model_identity": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 0,
+        "peak_gpu_allocated_bytes": 1415142912,
+        "prompt": "arpeggio",
+        "report_sha256": "9e6a2cf917d12480c30ea7e21479e49194b30411545725331657d2dfe40f9970",
+        "sampled_tokens_sha256": "49ee5e2ad4a9538f750902aac99106e4deda75ef6eb49c34374eb17edfdef171",
+        "sampling_seconds": 2.3666659999871626,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 6.599593200022355
+      },
+      {
+        "continuation_note_end_seconds": 9.63,
+        "continuation_pitch_range": [
+          43,
+          91
+        ],
+        "description": "Authored arpeggio",
+        "directory": "outputs\\full-generation\\arpeggio-lstm-seed43",
+        "generated_notes": 127,
+        "label": "LSTM · full corpus",
+        "log": "outputs\\full-generation\\arpeggio-lstm-seed43.log",
+        "max_note_end_adjustment_ms": 70,
+        "model": "lstm",
+        "model_identity": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 2,
+        "peak_gpu_allocated_bytes": 84540416,
+        "prompt": "arpeggio",
+        "report_sha256": "f728c587eff5766c9aeddccf6c7155b015a54e4664743af1d0365d581f8fc176",
+        "sampled_tokens_sha256": "752f8838d34f5f13e07b30e0984a8a4f241d9bec7405c82cff2596c01c758ed0",
+        "sampling_seconds": 0.5641802999889478,
+        "seed": 43,
+        "stop_reason": "token_budget",
+        "success": true,
+        "wall_seconds": 1.7564494999824092
+      },
+      {
+        "continuation_note_end_seconds": 5.51,
+        "continuation_pitch_range": [
+          40,
+          76
+        ],
+        "description": "Authored arpeggio",
+        "directory": "outputs\\full-generation\\arpeggio-transformer-seed43",
+        "generated_notes": 127,
+        "label": "Scratch Transformer · full corpus",
+        "log": "outputs\\full-generation\\arpeggio-transformer-seed43.log",
+        "max_note_end_adjustment_ms": 360,
+        "model": "transformer",
+        "model_identity": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 30,
+        "peak_gpu_allocated_bytes": 198945792,
+        "prompt": "arpeggio",
+        "report_sha256": "ebed64c1a869fbdbf0c576d74e584f1020a87b113f7a3efb01fb7b8b758902f6",
+        "sampled_tokens_sha256": "4722e8c08e2b2cdad916060a7cb336d53d1850fac6300712f8184ecbcbdda1e1",
+        "sampling_seconds": 3.3649611999862827,
+        "seed": 43,
+        "stop_reason": "token_budget",
+        "success": true,
+        "wall_seconds": 5.367942999990191
+      },
+      {
+        "continuation_note_end_seconds": 11.97,
+        "continuation_pitch_range": [
+          43,
+          72
+        ],
+        "description": "Authored arpeggio",
+        "directory": "outputs\\full-generation\\arpeggio-aria-seed43",
+        "generated_notes": 54,
+        "label": "Pretrained Aria",
+        "log": "outputs\\full-generation\\arpeggio-aria-seed43.log",
+        "max_note_end_adjustment_ms": 0,
+        "model": "aria",
+        "model_identity": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 0,
+        "peak_gpu_allocated_bytes": 1415142912,
+        "prompt": "arpeggio",
+        "report_sha256": "c02768c82c7e96bba8ac0ab91c3a570bb718535d139efe75ba6a932fe0f5e557",
+        "sampled_tokens_sha256": "129d05370d367365c3a06f7a82082ad1f98f25d26b4fb43a828cbcca1642b766",
+        "sampling_seconds": 2.43118830001913,
+        "seed": 43,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 6.660898000001907
+      },
+      {
+        "continuation_note_end_seconds": 11.83,
+        "continuation_pitch_range": [
+          36,
+          81
+        ],
+        "description": "Authored melody with held accompaniment",
+        "directory": "outputs\\full-generation\\melody-lstm-seed42",
+        "generated_notes": 107,
+        "label": "LSTM · full corpus",
+        "log": "outputs\\full-generation\\melody-lstm-seed42.log",
+        "max_note_end_adjustment_ms": 190,
+        "model": "lstm",
+        "model_identity": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 3,
+        "peak_gpu_allocated_bytes": 84294144,
+        "prompt": "melody",
+        "report_sha256": "f44dc24c30d3090cd02bf87dc25dd6bd9be5342084ef3da854fb61b5225be4d8",
+        "sampled_tokens_sha256": "62c9ab8ed325da2ade6672ee9a0ad276b47a87499ec31e2a27484be6926679c4",
+        "sampling_seconds": 0.46118360001128167,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 1.6565479999990202
+      },
+      {
+        "continuation_note_end_seconds": 12.69,
+        "continuation_pitch_range": [
+          48,
+          78
+        ],
+        "description": "Authored melody with held accompaniment",
+        "directory": "outputs\\full-generation\\melody-transformer-seed42",
+        "generated_notes": 57,
+        "label": "Scratch Transformer · full corpus",
+        "log": "outputs\\full-generation\\melody-transformer-seed42.log",
+        "max_note_end_adjustment_ms": 1070,
+        "model": "transformer",
+        "model_identity": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 13,
+        "peak_gpu_allocated_bytes": 198419456,
+        "prompt": "melody",
+        "report_sha256": "2eaf9dc3c2c26e442c52a8f70064e69d0b8fb1027ddbaeaadd9be1a47a71895c",
+        "sampled_tokens_sha256": "646c65ae0eafac34f37a45fe3b0ca289ebf8111f4fb2a877e26a40206ab0f52d",
+        "sampling_seconds": 1.4751182000036351,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 3.3994746999815106
+      },
+      {
+        "continuation_note_end_seconds": 11.86,
+        "continuation_pitch_range": [
+          43,
+          69
+        ],
+        "description": "Authored melody with held accompaniment",
+        "directory": "outputs\\full-generation\\melody-aria-seed42",
+        "generated_notes": 30,
+        "label": "Pretrained Aria",
+        "log": "outputs\\full-generation\\melody-aria-seed42.log",
+        "max_note_end_adjustment_ms": 0,
+        "model": "aria",
+        "model_identity": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 0,
+        "peak_gpu_allocated_bytes": 1409292800,
+        "prompt": "melody",
+        "report_sha256": "0fb2df0df2ae262d8be1fc68d9469fb5e784cbdf1c0532611071b9735f66c651",
+        "sampled_tokens_sha256": "51e6968efec4709a025b398a2fc80897dba0ee034301cc474cfe511358d6ba28",
+        "sampling_seconds": 1.334541599964723,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 5.551269100047648
+      },
+      {
+        "continuation_note_end_seconds": 11.7,
+        "continuation_pitch_range": [
+          36,
+          86
+        ],
+        "description": "Authored melody with held accompaniment",
+        "directory": "outputs\\full-generation\\melody-lstm-seed43",
+        "generated_notes": 127,
+        "label": "LSTM · full corpus",
+        "log": "outputs\\full-generation\\melody-lstm-seed43.log",
+        "max_note_end_adjustment_ms": 770,
+        "model": "lstm",
+        "model_identity": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 7,
+        "peak_gpu_allocated_bytes": 84294144,
+        "prompt": "melody",
+        "report_sha256": "0addd32d4a4a61565ff5429b1d709a019628bea06f45a6cb11cf891ca949895c",
+        "sampled_tokens_sha256": "0564b6c5c8d38ad9ab6a2b2eb1c470caf2b4107959d1c016ca50c88c7c5e930b",
+        "sampling_seconds": 0.5176169999758713,
+        "seed": 43,
+        "stop_reason": "token_budget",
+        "success": true,
+        "wall_seconds": 1.6784946999978274
+      },
+      {
+        "continuation_note_end_seconds": 12.09,
+        "continuation_pitch_range": [
+          30,
+          64
+        ],
+        "description": "Authored melody with held accompaniment",
+        "directory": "outputs\\full-generation\\melody-transformer-seed43",
+        "generated_notes": 110,
+        "label": "Scratch Transformer · full corpus",
+        "log": "outputs\\full-generation\\melody-transformer-seed43.log",
+        "max_note_end_adjustment_ms": 370,
+        "model": "transformer",
+        "model_identity": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 34,
+        "peak_gpu_allocated_bytes": 198746624,
+        "prompt": "melody",
+        "report_sha256": "2a95c283ed5a1828605f759833c3ca4b260cf3599981706b2e677547803a8e42",
+        "sampled_tokens_sha256": "b421e6f9b33842850ee7765d7537820db5c1e1fb8823ab731ee5ae4dbde71b0b",
+        "sampling_seconds": 2.9862464999896474,
+        "seed": 43,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 4.938158400007524
+      },
+      {
+        "continuation_note_end_seconds": 12.06,
+        "continuation_pitch_range": [
+          43,
+          72
+        ],
+        "description": "Authored melody with held accompaniment",
+        "directory": "outputs\\full-generation\\melody-aria-seed43",
+        "generated_notes": 31,
+        "label": "Pretrained Aria",
+        "log": "outputs\\full-generation\\melody-aria-seed43.log",
+        "max_note_end_adjustment_ms": 0,
+        "model": "aria",
+        "model_identity": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 0,
+        "peak_gpu_allocated_bytes": 1409292800,
+        "prompt": "melody",
+        "report_sha256": "3fa5ff43a69ff5ea3ccf753f8bd2eab12746221ba53fa1319ef7ff8ecda98726",
+        "sampled_tokens_sha256": "bd5e334f2d3855c44631a2c110addf72a44dd0dfa88670ab081e0cfa38bd64c3",
+        "sampling_seconds": 1.3546350999968126,
+        "seed": 43,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 5.548304399999324
+      },
+      {
+        "continuation_note_end_seconds": 11.91,
+        "continuation_pitch_range": [
+          41,
+          77
+        ],
+        "description": "Authored syncopated minor chords",
+        "directory": "outputs\\full-generation\\syncopation-lstm-seed42",
+        "generated_notes": 105,
+        "label": "LSTM · full corpus",
+        "log": "outputs\\full-generation\\syncopation-lstm-seed42.log",
+        "max_note_end_adjustment_ms": 60,
+        "model": "lstm",
+        "model_identity": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 3,
+        "peak_gpu_allocated_bytes": 84663808,
+        "prompt": "syncopation",
+        "report_sha256": "7d2ad167ab1fbf5d4febf8e0a5f268a47aa9bba5870a4290cd4df9cb8f36d61c",
+        "sampled_tokens_sha256": "1e23430ed5a14282fa6706f271820cca86fb54f6eea0170666f13bdc191b7078",
+        "sampling_seconds": 0.44081739999819547,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 1.6013275999575853
+      },
+      {
+        "continuation_note_end_seconds": 12.1,
+        "continuation_pitch_range": [
+          45,
+          74
+        ],
+        "description": "Authored syncopated minor chords",
+        "directory": "outputs\\full-generation\\syncopation-transformer-seed42",
+        "generated_notes": 120,
+        "label": "Scratch Transformer · full corpus",
+        "log": "outputs\\full-generation\\syncopation-transformer-seed42.log",
+        "max_note_end_adjustment_ms": 170,
+        "model": "transformer",
+        "model_identity": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 18,
+        "peak_gpu_allocated_bytes": 198956032,
+        "prompt": "syncopation",
+        "report_sha256": "c6a87acf6221d36e823b818c93c40c0f26973547570f6658f9734ce4866811b1",
+        "sampled_tokens_sha256": "f2ce0d2c09c7ccf7152b7c64eebd81d0f14fb91d909fcb2074f5baff790d04f6",
+        "sampling_seconds": 3.007319800031837,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 5.000287999981083
+      },
+      {
+        "continuation_note_end_seconds": 11.69,
+        "continuation_pitch_range": [
+          40,
+          72
+        ],
+        "description": "Authored syncopated minor chords",
+        "directory": "outputs\\full-generation\\syncopation-aria-seed42",
+        "generated_notes": 80,
+        "label": "Pretrained Aria",
+        "log": "outputs\\full-generation\\syncopation-aria-seed42.log",
+        "max_note_end_adjustment_ms": 0,
+        "model": "aria",
+        "model_identity": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 0,
+        "peak_gpu_allocated_bytes": 1416811520,
+        "prompt": "syncopation",
+        "report_sha256": "ccf7d23670a2b14a9a6edb4a70d81c20d68b140599e76e1515cb32f71e51e68f",
+        "sampled_tokens_sha256": "7f68a39c6507e53f3f678881faf05a889cc9db159beafa759f001435329a3217",
+        "sampling_seconds": 3.514246999984607,
+        "seed": 42,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 7.732591100037098
+      },
+      {
+        "continuation_note_end_seconds": 11.1,
+        "continuation_pitch_range": [
+          38,
+          79
+        ],
+        "description": "Authored syncopated minor chords",
+        "directory": "outputs\\full-generation\\syncopation-lstm-seed43",
+        "generated_notes": 127,
+        "label": "LSTM · full corpus",
+        "log": "outputs\\full-generation\\syncopation-lstm-seed43.log",
+        "max_note_end_adjustment_ms": 20,
+        "model": "lstm",
+        "model_identity": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 1,
+        "peak_gpu_allocated_bytes": 84663808,
+        "prompt": "syncopation",
+        "report_sha256": "97a3fce5213bb1b62bf0ec0b53407aa606b48a58de645c3c81b2e94474898b31",
+        "sampled_tokens_sha256": "a2410a4c5f050fa218c053dea884c69c3758b82a73e06f02d52373ebe0d009e1",
+        "sampling_seconds": 0.5050412000273354,
+        "seed": 43,
+        "stop_reason": "token_budget",
+        "success": true,
+        "wall_seconds": 1.6697243999806233
+      },
+      {
+        "continuation_note_end_seconds": 10.94,
+        "continuation_pitch_range": [
+          33,
+          69
+        ],
+        "description": "Authored syncopated minor chords",
+        "directory": "outputs\\full-generation\\syncopation-transformer-seed43",
+        "generated_notes": 117,
+        "label": "Scratch Transformer · full corpus",
+        "log": "outputs\\full-generation\\syncopation-transformer-seed43.log",
+        "max_note_end_adjustment_ms": 210,
+        "model": "transformer",
+        "model_identity": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-full-20261006-001\\best.pt",
+          "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "checkpoint_source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 100003399,
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 16,
+        "peak_gpu_allocated_bytes": 198937600,
+        "prompt": "syncopation",
+        "report_sha256": "cfe7ca460fc74fd7b451880aa602df823095bb09da2131707c9eb164e50d47ff",
+        "sampled_tokens_sha256": "5945b415375e82edf82156dcdb716cd4ded47f303d23bd8d152e3e21d8bf494e",
+        "sampling_seconds": 3.038033099961467,
+        "seed": 43,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 4.994730899983551
+      },
+      {
+        "continuation_note_end_seconds": 11.99,
+        "continuation_pitch_range": [
+          40,
+          76
+        ],
+        "description": "Authored syncopated minor chords",
+        "directory": "outputs\\full-generation\\syncopation-aria-seed43",
+        "generated_notes": 75,
+        "label": "Pretrained Aria",
+        "log": "outputs\\full-generation\\syncopation-aria-seed43.log",
+        "max_note_end_adjustment_ms": 0,
+        "model": "aria",
+        "model_identity": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "note_ends_changed_on_export": 0,
+        "peak_gpu_allocated_bytes": 1416811520,
+        "prompt": "syncopation",
+        "report_sha256": "a5048541fd5126a43c3fba49c1c49025a902b1036ed6113f5e2417a8d67ed438",
+        "sampled_tokens_sha256": "a4936d5ff6118e71c3bc2deb6ab0f9e4bd30170e4f2df431d38b9b17292d8f88",
+        "sampling_seconds": 3.2951553000020795,
+        "seed": 43,
+        "stop_reason": "time_horizon",
+        "success": true,
+        "wall_seconds": 7.540621599997394
+      }
+    ],
+    "failures": 0,
+    "path": "outputs\\full-generation\\suite.json",
+    "protocol": {
+      "max_new_tokens": 384,
+      "min_p": 0.035,
+      "models": [
+        {
+          "checkpoint": "runs/lstm-full-20261006-001/best.pt",
+          "id": "lstm",
+          "label": "LSTM · full corpus"
+        },
+        {
+          "checkpoint": "runs/transformer-small-full-20261006-001/best.pt",
+          "id": "transformer",
+          "label": "Scratch Transformer · full corpus"
+        },
+        {
+          "checkpoint": null,
+          "id": "aria",
+          "label": "Pretrained Aria"
+        }
+      ],
+      "name": "full-corpus-100m-20261006",
+      "new_seconds": 12,
+      "prompt_seconds": 8,
+      "prompts": [
+        {
+          "description": "Authored arpeggio",
+          "id": "arpeggio",
+          "path": "outputs/prompts/arpeggio.mid"
+        },
+        {
+          "description": "Authored melody with held accompaniment",
+          "id": "melody",
+          "path": "outputs/prompts/melody.mid"
+        },
+        {
+          "description": "Authored syncopated minor chords",
+          "id": "syncopation",
+          "path": "outputs/prompts/syncopation.mid"
+        }
+      ],
+      "seeds": [
+        42,
+        43
+      ],
+      "temperature": 0.98
+    },
+    "sha256": "a4220f60c3343bda4af2539f6153226ad6a0588d5c7427ff8d801d5ef57bd943",
+    "successes": 18
+  },
+  "human_assessed": false,
+  "identical_data_and_validation_identities": true,
+  "identical_training_token_trajectories": true,
+  "musical_quality_ranking": null,
+  "reconstruction_listening": {
+    "all_artifact_hashes_verified": true,
+    "all_audio_nonzero_and_unclipped": true,
+    "audio_files": 24,
+    "human_assessed": false,
+    "note_counts_match": true,
+    "pairs": 12
+  },
+  "runs": [
+    {
+      "all_logged_metrics_finite": true,
+      "checkpoints": [
+        {
+          "checkpoint": "best",
+          "expected_loss": 4.316104035343333,
+          "identity": {
+            "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+            "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+            "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+            "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+            "validation_windows_sha256": "415ab9389d2ee6af24084186c60e6ae9207bd60ec2240147a07de08700387795"
+          },
+          "loss_delta": 0.0,
+          "run": "runs\\lstm-full-20261006-001",
+          "sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "strict_load_passed": true,
+          "update": 3239,
+          "valid_tokens_seen": 100003399,
+          "validation": {
+            "loss": 4.316104035343333,
+            "valid_tokens": 1093516,
+            "windows": 536
+          }
+        },
+        {
+          "checkpoint": "latest",
+          "expected_loss": 4.316104035343333,
+          "identity": {
+            "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+            "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+            "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+            "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+            "validation_windows_sha256": "415ab9389d2ee6af24084186c60e6ae9207bd60ec2240147a07de08700387795"
+          },
+          "loss_delta": 0.0,
+          "run": "runs\\lstm-full-20261006-001",
+          "sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+          "strict_load_passed": true,
+          "update": 3239,
+          "valid_tokens_seen": 100003399,
+          "validation": {
+            "loss": 4.316104035343333,
+            "valid_tokens": 1093516,
+            "windows": 536
+          }
+        }
+      ],
+      "config_sha256": "40b4d10e21c22b3303fed7fca4912ed3dd0dc46f838fada598e4ad71151231df",
+      "directory": "runs/lstm-full-20261006-001",
+      "initial_validation": {
+        "loss": 9.786086770506786,
+        "valid_tokens": 1093516,
+        "windows": 536
+      },
+      "metrics_sha256": "f097b633af3d985ce98984153b098c88f2a7b0e26a6f825e7eb91326e6ab43e7",
+      "model": {
+        "dropout": 0.1,
+        "kind": "lstm",
+        "layers": 1,
+        "width": 256
+      },
+      "optimizer_updates_contiguous": true,
+      "summary": {
+        "best_validation_loss": 4.316104035343333,
+        "completed_budget": true,
+        "final_validation_loss": 4.316104035343333,
+        "identity": {
+          "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+          "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+          "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+          "validation_windows_sha256": "415ab9389d2ee6af24084186c60e6ae9207bd60ec2240147a07de08700387795"
+        },
+        "initial_validation_loss": 9.786086770506786,
+        "parameter_count": 9620287,
+        "peak_gpu_allocated_bytes": 2014670848,
+        "schedule_tokens_seen": 100003399,
+        "training_seconds": 1336.0664187009097,
+        "update": 3239,
+        "valid_tokens_seen": 100003399
+      },
+      "test_data_used": false,
+      "validation_history": [
+        {
+          "clipped": false,
+          "gradient_norm": 0.19008708000183105,
+          "learning_rate": 0.00029929394032075286,
+          "loss": 6.803169874732661,
+          "seconds": 0.40725480002583936,
+          "tokens_per_second": 80367.37688032986,
+          "update": 200,
+          "valid_tokens": 32730,
+          "valid_tokens_seen": 6159222,
+          "validation_loss": 6.834000499878374,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.15855666995048523,
+          "learning_rate": 0.0002938739301198469,
+          "loss": 5.819817308958073,
+          "seconds": 0.3962908000103198,
+          "tokens_per_second": 76676.01670088914,
+          "update": 400,
+          "valid_tokens": 30386,
+          "valid_tokens_seen": 12337209,
+          "validation_loss": 5.9451266959628395,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.15085503458976746,
+          "learning_rate": 0.00028328469430246927,
+          "loss": 5.506616000615343,
+          "seconds": 0.3965115000028163,
+          "tokens_per_second": 73773.39623136335,
+          "update": 600,
+          "valid_tokens": 29252,
+          "valid_tokens_seen": 18527930,
+          "validation_loss": 5.548378971764016,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.2045992761850357,
+          "learning_rate": 0.00026792591955522186,
+          "loss": 5.053897092355505,
+          "seconds": 0.4027013999875635,
+          "tokens_per_second": 73511.04317222195,
+          "update": 800,
+          "valid_tokens": 29603,
+          "valid_tokens_seen": 24729350,
+          "validation_loss": 5.139733452116841,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.19605615735054016,
+          "learning_rate": 0.00024854758378895425,
+          "loss": 4.70161303630363,
+          "seconds": 0.414429199998267,
+          "tokens_per_second": 73112.6088608783,
+          "update": 1000,
+          "valid_tokens": 30300,
+          "valid_tokens_seen": 30896265,
+          "validation_loss": 4.826236612064318,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.16582462191581726,
+          "learning_rate": 0.0002258259749685813,
+          "loss": 4.5902304338716435,
+          "seconds": 0.42750200000591576,
+          "tokens_per_second": 72568.08155183065,
+          "update": 1200,
+          "valid_tokens": 31023,
+          "valid_tokens_seen": 37068665,
+          "validation_loss": 4.657553691415466,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.15428294241428375,
+          "learning_rate": 0.00020067240463299719,
+          "loss": 4.376328142345143,
+          "seconds": 0.40330800000810996,
+          "tokens_per_second": 78175.98460572564,
+          "update": 1400,
+          "valid_tokens": 31529,
+          "valid_tokens_seen": 43243252,
+          "validation_loss": 4.55770718532582,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.13988029956817627,
+          "learning_rate": 0.00017399386735516648,
+          "loss": 4.494959222487267,
+          "seconds": 0.4155573999742046,
+          "tokens_per_second": 74651.54032132665,
+          "update": 1600,
+          "valid_tokens": 31022,
+          "valid_tokens_seen": 49441474,
+          "validation_loss": 4.492496507181308,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.13912411034107208,
+          "learning_rate": 0.0001470919280207039,
+          "loss": 4.4694642572521515,
+          "seconds": 0.41682340000988916,
+          "tokens_per_second": 75259.69031310562,
+          "update": 1800,
+          "valid_tokens": 31370,
+          "valid_tokens_seen": 55607891,
+          "validation_loss": 4.443614745706167,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.17788943648338318,
+          "learning_rate": 0.0001208601122748757,
+          "loss": 4.345543486560782,
+          "seconds": 0.4276143999886699,
+          "tokens_per_second": 76564.30653613976,
+          "update": 2000,
+          "valid_tokens": 32740,
+          "valid_tokens_seen": 61784421,
+          "validation_loss": 4.406411082676774,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.15416264533996582,
+          "learning_rate": 9.628645415836697e-05,
+          "loss": 4.297586526525546,
+          "seconds": 0.40026340004988015,
+          "tokens_per_second": 76479.63814874201,
+          "update": 2200,
+          "valid_tokens": 30612,
+          "valid_tokens_seen": 67988128,
+          "validation_loss": 4.379065303671254,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.16281048953533173,
+          "learning_rate": 7.460987204879214e-05,
+          "loss": 4.259704816067457,
+          "seconds": 0.40532590000657365,
+          "tokens_per_second": 79876.46483847917,
+          "update": 2400,
+          "valid_tokens": 32376,
+          "valid_tokens_seen": 74151033,
+          "validation_loss": 4.357728858534077,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.17386306822299957,
+          "learning_rate": 5.652208144616845e-05,
+          "loss": 4.214815200178658,
+          "seconds": 0.39829600002849475,
+          "tokens_per_second": 77291.762904467,
+          "update": 2600,
+          "valid_tokens": 30785,
+          "valid_tokens_seen": 80314121,
+          "validation_loss": 4.342585899163227,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.16015613079071045,
+          "learning_rate": 4.2799616849078586e-05,
+          "loss": 4.170093703585368,
+          "seconds": 0.40989289997378364,
+          "tokens_per_second": 70630.64522916029,
+          "update": 2800,
+          "valid_tokens": 28951,
+          "valid_tokens_seen": 86446200,
+          "validation_loss": 4.331701538389128,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.15763679146766663,
+          "learning_rate": 3.3850111450146986e-05,
+          "loss": 4.240791007238376,
+          "seconds": 0.4060846999636851,
+          "tokens_per_second": 80288.66884892652,
+          "update": 3000,
+          "valid_tokens": 32604,
+          "valid_tokens_seen": 92608302,
+          "validation_loss": 4.324260117778913,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.17784690856933594,
+          "learning_rate": 3.010253002585365e-05,
+          "loss": 4.274148831896831,
+          "seconds": 0.39836380002088845,
+          "tokens_per_second": 77471.8987979875,
+          "update": 3200,
+          "valid_tokens": 30862,
+          "valid_tokens_seen": 98796564,
+          "validation_loss": 4.317302550685701,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.1467779576778412,
+          "learning_rate": 2.9999999999999997e-05,
+          "loss": 4.136662044203646,
+          "seconds": 0.40828590001910925,
+          "tokens_per_second": 71200.10756834713,
+          "update": 3239,
+          "valid_tokens": 29070,
+          "valid_tokens_seen": 100003399,
+          "validation_loss": 4.316104035343333,
+          "validation_tokens": 1093516
+        }
+      ]
+    },
+    {
+      "all_logged_metrics_finite": true,
+      "checkpoints": [
+        {
+          "checkpoint": "best",
+          "expected_loss": 3.2757848754184895,
+          "identity": {
+            "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+            "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+            "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+            "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+            "validation_windows_sha256": "415ab9389d2ee6af24084186c60e6ae9207bd60ec2240147a07de08700387795"
+          },
+          "loss_delta": 0.0,
+          "run": "runs\\transformer-small-full-20261006-001",
+          "sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "strict_load_passed": true,
+          "update": 3239,
+          "valid_tokens_seen": 100003399,
+          "validation": {
+            "loss": 3.2757848754184895,
+            "valid_tokens": 1093516,
+            "windows": 536
+          }
+        },
+        {
+          "checkpoint": "latest",
+          "expected_loss": 3.2757848754184895,
+          "identity": {
+            "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+            "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+            "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+            "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+            "validation_windows_sha256": "415ab9389d2ee6af24084186c60e6ae9207bd60ec2240147a07de08700387795"
+          },
+          "loss_delta": 0.0,
+          "run": "runs\\transformer-small-full-20261006-001",
+          "sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+          "strict_load_passed": true,
+          "update": 3239,
+          "valid_tokens_seen": 100003399,
+          "validation": {
+            "loss": 3.2757848754184895,
+            "valid_tokens": 1093516,
+            "windows": 536
+          }
+        }
+      ],
+      "config_sha256": "0c673520a1f2971493532a2926e495f760f13b68542fe5e2c10455b5dd6c3d5a",
+      "directory": "runs/transformer-small-full-20261006-001",
+      "initial_validation": {
+        "loss": 9.890134052108062,
+        "valid_tokens": 1093516,
+        "windows": 536
+      },
+      "metrics_sha256": "1dba737459ca4259aecb0642adb7325320958994dbc3f87f7517a70523da1eac",
+      "model": {
+        "dropout": 0.1,
+        "feedforward": 1536,
+        "gradient_checkpointing": false,
+        "heads": 8,
+        "kind": "transformer",
+        "layers": 8,
+        "tied_embeddings": true,
+        "width": 512
+      },
+      "optimizer_updates_contiguous": true,
+      "summary": {
+        "best_validation_loss": 3.2757848754184895,
+        "completed_budget": true,
+        "final_validation_loss": 3.2757848754184895,
+        "identity": {
+          "index_sha256": "b9c6c0b9c4bb287355ba80f2f12104d1c59e2bd6894061c2c1376bfd9f85040f",
+          "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+          "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+          "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+          "validation_windows_sha256": "415ab9389d2ee6af24084186c60e6ae9207bd60ec2240147a07de08700387795"
+        },
+        "initial_validation_loss": 9.890134052108062,
+        "parameter_count": 36356608,
+        "peak_gpu_allocated_bytes": 4474230784,
+        "schedule_tokens_seen": 100003399,
+        "training_seconds": 1742.1449390000198,
+        "update": 3239,
+        "valid_tokens_seen": 100003399
+      },
+      "test_data_used": false,
+      "validation_history": [
+        {
+          "clipped": false,
+          "gradient_norm": 0.5208685398101807,
+          "learning_rate": 0.00029929394032075286,
+          "loss": 5.293641154903758,
+          "seconds": 0.535488500026986,
+          "tokens_per_second": 61121.76078169852,
+          "update": 200,
+          "valid_tokens": 32730,
+          "valid_tokens_seen": 6159222,
+          "validation_loss": 5.336769260091987,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.8580438494682312,
+          "learning_rate": 0.0002938739301198469,
+          "loss": 4.362910756598433,
+          "seconds": 0.535663700022269,
+          "tokens_per_second": 56725.88976765976,
+          "update": 400,
+          "valid_tokens": 30386,
+          "valid_tokens_seen": 12337209,
+          "validation_loss": 4.495568655516929,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.776059627532959,
+          "learning_rate": 0.00028328469430246927,
+          "loss": 4.223825507657596,
+          "seconds": 0.5361493999953382,
+          "tokens_per_second": 54559.419445875246,
+          "update": 600,
+          "valid_tokens": 29252,
+          "valid_tokens_seen": 18527930,
+          "validation_loss": 4.242738366068147,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.7867497205734253,
+          "learning_rate": 0.00026792591955522186,
+          "loss": 3.9400076639191974,
+          "seconds": 0.5371066000079736,
+          "tokens_per_second": 55115.688393254764,
+          "update": 800,
+          "valid_tokens": 29603,
+          "valid_tokens_seen": 24729350,
+          "validation_loss": 4.028157690208122,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.758228063583374,
+          "learning_rate": 0.00024854758378895425,
+          "loss": 3.6949138820132013,
+          "seconds": 0.5359860999742523,
+          "tokens_per_second": 56531.31676634068,
+          "update": 1000,
+          "valid_tokens": 30300,
+          "valid_tokens_seen": 30896265,
+          "validation_loss": 3.860025580258428,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.6319291591644287,
+          "learning_rate": 0.0002258259749685813,
+          "loss": 3.6823369959384973,
+          "seconds": 0.5397245999774896,
+          "tokens_per_second": 57479.314452766994,
+          "update": 1200,
+          "valid_tokens": 31023,
+          "valid_tokens_seen": 37068665,
+          "validation_loss": 3.7079205974123837,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.7178454995155334,
+          "learning_rate": 0.00020067240463299719,
+          "loss": 3.4178459711694,
+          "seconds": 0.5366610999917611,
+          "tokens_per_second": 58750.29883940542,
+          "update": 1400,
+          "valid_tokens": 31529,
+          "valid_tokens_seen": 43243252,
+          "validation_loss": 3.6109868019763773,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.5578433275222778,
+          "learning_rate": 0.00017399386735516648,
+          "loss": 3.4762577767390885,
+          "seconds": 0.5442790000233799,
+          "tokens_per_second": 56996.5036289613,
+          "update": 1600,
+          "valid_tokens": 31022,
+          "valid_tokens_seen": 49441474,
+          "validation_loss": 3.5303540779667375,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.6569518446922302,
+          "learning_rate": 0.0001470919280207039,
+          "loss": 3.507368455132292,
+          "seconds": 0.5366127999732271,
+          "tokens_per_second": 58459.28386643987,
+          "update": 1800,
+          "valid_tokens": 31370,
+          "valid_tokens_seen": 55607891,
+          "validation_loss": 3.4661282105154383,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.6510594487190247,
+          "learning_rate": 0.0001208601122748757,
+          "loss": 3.2814972128894317,
+          "seconds": 0.5347551999730058,
+          "tokens_per_second": 61224.27608306137,
+          "update": 2000,
+          "valid_tokens": 32740,
+          "valid_tokens_seen": 61784421,
+          "validation_loss": 3.416955863657345,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.6851333379745483,
+          "learning_rate": 9.628645415836697e-05,
+          "loss": 3.2612113917744674,
+          "seconds": 0.5371138000045903,
+          "tokens_per_second": 56993.50863771957,
+          "update": 2200,
+          "valid_tokens": 30612,
+          "valid_tokens_seen": 67988128,
+          "validation_loss": 3.3762033145834174,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.5579171180725098,
+          "learning_rate": 7.460987204879214e-05,
+          "loss": 3.236581012941685,
+          "seconds": 0.5361044000019319,
+          "tokens_per_second": 60391.222306482334,
+          "update": 2400,
+          "valid_tokens": 32376,
+          "valid_tokens_seen": 74151033,
+          "validation_loss": 3.341438432242304,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.7576565742492676,
+          "learning_rate": 5.652208144616845e-05,
+          "loss": 3.2413827757024527,
+          "seconds": 0.5373080999706872,
+          "tokens_per_second": 57294.87421030778,
+          "update": 2600,
+          "valid_tokens": 30785,
+          "valid_tokens_seen": 80314121,
+          "validation_loss": 3.320636394294871,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.5989284515380859,
+          "learning_rate": 4.2799616849078586e-05,
+          "loss": 3.1825155542986425,
+          "seconds": 0.5366427000262775,
+          "tokens_per_second": 53948.37197744863,
+          "update": 2800,
+          "valid_tokens": 28951,
+          "valid_tokens_seen": 86446200,
+          "validation_loss": 3.301199873490077,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.5145590901374817,
+          "learning_rate": 3.3850111450146986e-05,
+          "loss": 3.211851402435284,
+          "seconds": 0.5349984000204131,
+          "tokens_per_second": 60942.23832960244,
+          "update": 3000,
+          "valid_tokens": 32604,
+          "valid_tokens_seen": 92608302,
+          "validation_loss": 3.292891817469406,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.5765112638473511,
+          "learning_rate": 3.010253002585365e-05,
+          "loss": 3.176670288299527,
+          "seconds": 0.5360269999946468,
+          "tokens_per_second": 57575.45795325276,
+          "update": 3200,
+          "valid_tokens": 30862,
+          "valid_tokens_seen": 98796564,
+          "validation_loss": 3.2787237220208714,
+          "validation_tokens": 1093516
+        },
+        {
+          "clipped": false,
+          "gradient_norm": 0.5792915225028992,
+          "learning_rate": 2.9999999999999997e-05,
+          "loss": 3.136922192122463,
+          "seconds": 0.5344313000096008,
+          "tokens_per_second": 54394.26919695341,
+          "update": 3239,
+          "valid_tokens": 29070,
+          "valid_tokens_seen": 100003399,
+          "validation_loss": 3.2757848754184895,
+          "validation_tokens": 1093516
+        }
+      ]
+    }
+  ],
+  "training_source": {
+    "accumulation": 4,
+    "frozen_directory": "outputs/full-training-code-225d8b0cb206711f",
+    "human_listening_assessed": false,
+    "microbatch": 4,
+    "runs": [
+      "runs/lstm-full-20261006-001",
+      "runs/transformer-small-full-20261006-001"
+    ],
+    "snapshot": "outputs/full-training-source-225d8b0cb206711f.zip",
+    "snapshot_sha256": "3e31458be7b5f84fbc8f6bbe1d760ac0ecdafd82cee7f8580086c88e6d89346d",
+    "source_sha256": "225d8b0cb206711fd40fc1512e233a47c26133ac3e9567e9ff270212c17431ae",
+    "valid_token_budget_per_model": 100000000
+  },
+  "final_integration": {
+    "evidence_path": "outputs/full-browser-verification.json",
+    "evidence_sha256": "c7313ca83b7e1ead8d13a7c5281bd0182d4db61951097d2580aba4500a1ca268",
+    "verified_utc": "2026-10-06T08:39:13.763753+00:00",
+    "app_jobs": [
+      {
+        "job_id": "a6c21d24ea7c460981caef27d75f74ce",
+        "source": "demo",
+        "model": "transformer",
+        "model_label": "Scratch Transformer · full corpus",
+        "checkpoint": "runs/transformer-small-full-20261006-001/best.pt",
+        "checkpoint_sha256": "60fe63531cf34107dcd2b3ea91b6aed5260a45117883fc23c58ebce910799053",
+        "training_valid_tokens": 100003399,
+        "generation_source_sha256": "be011d138b141641f9612bd886cc10d29264bb094baaec2caaebd2a05d7bbee7",
+        "generated_notes": 69,
+        "prompt_notes": 36,
+        "sampling_seconds": 2.269176299974788,
+        "state": "complete",
+        "authored_input_hash_matches": true,
+        "files": {
+          "prompt.mid": {
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "combined.mid": {
+            "sha256": "e4be859711591f313591515e1b307711bd2aef2a3af76a6d67bc76240df73c95",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "continuation.mid": {
+            "sha256": "9a5d497ca1020dccc5e844a0014b6ca7d6f7806424ee8b9230fc697c97bcc3bb",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "prompt.wav": {
+            "sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "combined.wav": {
+            "sha256": "ecf6b04c22df8d4328fbd5fd68ea27e3b1ae0d6b4fd9c53d35bb786944586a39",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "continuation.wav": {
+            "sha256": "a1c6d21ee98553009bd157c31e782a7447e3023c2edaee65dc9bccbc43074bd3",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "sampled-tokens.npy": {
+            "sha256": "24acdbe11c2cdcec71d46ae6b54384a8ee9cf133700f9fcf1c7e5b73acb843b5",
+            "matches_fixed_suite": true
+          },
+          "report.json": {
+            "http_200_bytes_match": true
+          }
+        },
+        "audio_range_206_bytes_match": true
+      },
+      {
+        "job_id": "029b0b772288483dac8da5aa0bf5a864",
+        "source": "upload",
+        "model": "lstm",
+        "model_label": "LSTM · full corpus",
+        "checkpoint": "runs/lstm-full-20261006-001/best.pt",
+        "checkpoint_sha256": "44abbc01634b4ab272b2aea4b4395ecb9afe389fe0d6eaa7591d938140e3c814",
+        "training_valid_tokens": 100003399,
+        "generation_source_sha256": "be011d138b141641f9612bd886cc10d29264bb094baaec2caaebd2a05d7bbee7",
+        "generated_notes": 107,
+        "prompt_notes": 20,
+        "sampling_seconds": 0.9207791999797337,
+        "state": "complete",
+        "authored_input_hash_matches": true,
+        "files": {
+          "prompt.mid": {
+            "sha256": "a4aaf2baeca3b0187e94909f067054c9b72259bdfd0ec4b35a68d818285cfb57",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "combined.mid": {
+            "sha256": "c512fcd8b785c223d2091813bc116a22baa9736c6f524def0edfee2040afdc3b",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "continuation.mid": {
+            "sha256": "01b68ab63fa7bd2315f499d3f9f68675402a9dc276751604fc42414146366939",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "prompt.wav": {
+            "sha256": "bb79bb63d954ab2d9148239d8192834958053abb480dcca00c98bd1cc0470ef0",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "combined.wav": {
+            "sha256": "4b404fdf84d46c104c2008660b9f63003e405fa2ce3514aeacce71aaa83b6942",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "continuation.wav": {
+            "sha256": "2584ef598f98599718af04f8f5a0e95a885fea38d27afe59582b805598295e85",
+            "matches_fixed_suite": true,
+            "http_200_bytes_match": true
+          },
+          "sampled-tokens.npy": {
+            "sha256": "62c9ab8ed325da2ade6672ee9a0ad276b47a87499ec31e2a27484be6926679c4",
+            "matches_fixed_suite": true
+          },
+          "report.json": {
+            "http_200_bytes_match": true
+          }
+        },
+        "audio_range_206_bytes_match": true
+      }
+    ],
+    "software_checks": {
+      "tests_passed": 43,
+      "tests_seconds": 6.61,
+      "test_scope": "Final code test suite, recorded before the browser checks; no repeat required after documentation-only edits.",
+      "registry_recheck_tests_passed": 8,
+      "ruff_lint_passed": true,
+      "ruff_format_passed": true,
+      "pip_check_passed": true
+    },
+    "package": {
+      "wheel": "outputs\\package-check-full-final\\music_project-0.1.0-py3-none-any.whl",
+      "sha256": "657cac341fd809e536f17d3a557e66fdf540c5f1153c50d5247773ef070af007",
+      "html_sha256": "1cac7809d3f1c0b6592b8b42a6ae75cd3cf54fe7dc37e4fa7c81cc8870f88200",
+      "packaged_html_and_server_match_source": true,
+      "filelock_dependency_declared": true
+    },
+    "browser_observations": {
+      "method": "Earlier actual browser UI checks during this milestone; this final pass rechecks HTTP and artifact bytes.",
+      "comparison_audio_metadata": {
+        "players": 24,
+        "finite_duration_and_no_media_errors": true
+      },
+      "first_comparison_group_playback_time_advanced": [
+        "lstm",
+        "transformer",
+        "aria"
+      ],
+      "transformer_to_aria_switch_paused_transformer_before_its_end": true,
+      "full_app_transformer_demo_completed": true,
+      "full_app_lstm_upload_completed": true,
+      "lstm_app_audio_metadata_loaded": true,
+      "lstm_app_audio_playback_checked": false,
+      "human_auditory_assessment": false,
+      "musical_quality_ranking": null
+    },
+    "live_pages": [
+      {
+        "url": "http://127.0.0.1:8767/",
+        "status": 200,
+        "bytes": 17592,
+        "sha256": "1cac7809d3f1c0b6592b8b42a6ae75cd3cf54fe7dc37e4fa7c81cc8870f88200"
+      },
+      {
+        "url": "http://127.0.0.1:8766/full-listening/",
+        "status": 200,
+        "bytes": 222423,
+        "sha256": "dc757375be95483748eb0fd97a01f6059d6c30bd5041ac79392b231a58abf474"
+      },
+      {
+        "url": "http://127.0.0.1:8766/reconstruction-listening/",
+        "status": 200,
+        "bytes": 6470,
+        "sha256": "7d07e12ca58db7eca475e378c4d5784e62505b3a11d0d5b692c5068848e4f1ca"
+      }
+    ]
+  },
+  "subsequent_app_updates": [
+    {
+      "description": "Automatic remaining-context budgeting and explicit continuation-duration reporting",
+      "report": "docs/duration-budget-fix.md",
+      "evidence": "outputs/duration-fix-verification.json",
+      "source": "outputs/duration-fix-source.json",
+      "original_fixed_evaluation_preserved": true
+    }
+  ]
+}

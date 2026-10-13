@@ -1,0 +1,1 @@
+"""Local piano continuation interface."""

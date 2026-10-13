@@ -1,0 +1,9 @@
+# Preserve source bytes because experiment checkpoints record source SHA256.
+* -text
+# Keep harmless historical trailing blank lines as well as CRLF source bytes.
+* whitespace=blank-at-eol,space-before-tab,cr-at-eol,-blank-at-eof
+*.pdf binary
+*.pptx binary
+*.docx binary
+*.png binary
+*.zip binary

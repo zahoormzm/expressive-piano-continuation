@@ -1,0 +1,33 @@
+{
+  "ambiguity_exclusions": 13,
+  "bf16_forward_backward_passed": true,
+  "clean_manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+  "cuda_build": "13.0",
+  "date": "2026-10-05",
+  "deadline": "2026-10-13",
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "gpu_forward_backward_passed": true,
+  "human_listening_completed": false,
+  "note_integrity_exclusions": 1,
+  "official_performances_audited": 1276,
+  "pretrained_inference_verified": false,
+  "python": "3.11.9",
+  "reconstruction_examples_passed": 12,
+  "retained_split_counts": {
+    "test": 171,
+    "train": 957,
+    "validation": 134
+  },
+  "targeted_tests_passed": 14,
+  "token_pilot_performances": 32,
+  "token_pilot_totals": {
+    "test": 67271,
+    "train": 480314,
+    "validation": 85797
+  },
+  "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+  "torch": "2.14.1+cu130",
+  "trained_checkpoint": false,
+  "usable_performances": 1262,
+  "vocab_size": 17727
+}

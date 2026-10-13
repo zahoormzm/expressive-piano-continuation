@@ -1,0 +1,19 @@
+{
+  "name": "full-corpus-100m-20261006",
+  "prompt_seconds": 8,
+  "new_seconds": 12,
+  "max_new_tokens": 384,
+  "temperature": 0.98,
+  "min_p": 0.035,
+  "seeds": [42, 43],
+  "prompts": [
+    {"id": "arpeggio", "path": "outputs/prompts/arpeggio.mid", "description": "Authored arpeggio"},
+    {"id": "melody", "path": "outputs/prompts/melody.mid", "description": "Authored melody with held accompaniment"},
+    {"id": "syncopation", "path": "outputs/prompts/syncopation.mid", "description": "Authored syncopated minor chords"}
+  ],
+  "models": [
+    {"id": "lstm", "label": "LSTM · full corpus", "checkpoint": "runs/lstm-full-20261006-001/best.pt"},
+    {"id": "transformer", "label": "Scratch Transformer · full corpus", "checkpoint": "runs/transformer-small-full-20261006-001/best.pt"},
+    {"id": "aria", "label": "Pretrained Aria", "checkpoint": null}
+  ]
+}

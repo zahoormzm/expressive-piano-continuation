@@ -1,0 +1,48 @@
+{
+  "name": "transformer-150m-vs-musical-160m-20261008",
+  "prompt_seconds": 8,
+  "new_seconds": 12,
+  "max_new_tokens": "auto",
+  "temperature": 0.9,
+  "min_p": 0.035,
+  "seeds": [
+    44,
+    45
+  ],
+  "prompts": [
+    {
+      "id": "arpeggio",
+      "path": "outputs/prompts/arpeggio.mid",
+      "description": "Authored arpeggio"
+    },
+    {
+      "id": "melody",
+      "path": "outputs/prompts/melody.mid",
+      "description": "Authored melody with held accompaniment"
+    },
+    {
+      "id": "syncopation",
+      "path": "outputs/prompts/syncopation.mid",
+      "description": "Authored syncopated minor chords"
+    },
+    {
+      "id": "fur-elise",
+      "path": "outputs/user-test-inputs/fur-elise-30s.mid",
+      "description": "Prepared F\u00c3\u00bcr Elise excerpt (informal user input)"
+    }
+  ],
+  "models": [
+    {
+      "id": "baseline",
+      "label": "Transformer \u00b7 continued 150M",
+      "checkpoint": "runs/transformer-continued-150m-20261008-001/best.pt"
+    },
+    {
+      "id": "continued",
+      "label": "Transformer \u00b7 musical fine-tuning (final checkpoint)",
+      "checkpoint": "runs/transformer-musical-160m-20261008-001/latest.pt"
+    }
+  ],
+  "comparison_title": "Does musical fine-tuning improve the continuation?",
+  "comparison_description": "The candidate adds up to 10M scored targets: whole-passage key and time scaling on half the crops, and continuation-focused loss on three quarters. The other crops retain ordinary next-token loss. Training examples may use both methods. This compares the complete training package plus extra compute; it does not isolate either method."
+}

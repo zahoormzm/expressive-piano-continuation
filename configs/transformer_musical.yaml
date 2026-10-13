@@ -1,0 +1,37 @@
+name: transformer-musical-160m
+seed: 42
+device: cuda
+precision: bf16
+deterministic: false
+data:
+  token_summary: outputs/tokenization-full-summary.json
+  manifest: data/manifests/maestro-v3-clean.jsonl
+model:
+  kind: transformer
+  width: 512
+  layers: 8
+  heads: 8
+  feedforward: 1536
+  dropout: 0.1
+  tied_embeddings: true
+  gradient_checkpointing: false
+training:
+  context_length: 2048
+  microbatch: 4
+  accumulation: 4
+  token_budget: 10000000
+  learning_rate: 0.00003
+  warmup_fraction: 0
+  minimum_lr_fraction: 0.5
+  validation_every: 100
+  checkpoint_every: 100
+  validation_windows_per_piece: 4
+  musical_training:
+    augmentation_probability: 0.5
+    semitone_min: -5
+    semitone_max: 6
+    time_scale_min: 0.9
+    time_scale_max: 1.1
+    continuation_probability: 0.75
+    prompt_seconds_min: 2
+    prompt_seconds_max: 8

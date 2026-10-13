@@ -1,0 +1,21 @@
+name: lstm-full
+seed: 42
+device: cuda
+precision: bf16
+deterministic: false
+data:
+  token_summary: outputs/tokenization-full-summary.json
+  manifest: data/manifests/maestro-v3-clean.jsonl
+model:
+  kind: lstm
+  width: 256
+  layers: 1
+  dropout: 0.1
+training:
+  context_length: 2048
+  microbatch: 4
+  accumulation: 4
+  token_budget: 100000000
+  validation_every: 200
+  checkpoint_every: 200
+  validation_windows_per_piece: 4

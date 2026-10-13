@@ -1,0 +1,694 @@
+{
+  "assets": {
+    "fluidsynth": {
+      "directory": "data/assets/fluidsynth-2.6.1",
+      "license": "LGPL-2.1-or-later",
+      "path": "data/assets/fluidsynth-2.6.1.zip",
+      "sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+      "url": "https://github.com/FluidSynth/fluidsynth/releases/download/v2.6.1/fluidsynth-v2.6.1-win10-x64-cpp11.zip",
+      "version": "2.6.1"
+    },
+    "pretrained": {
+      "bytes": 2634170640,
+      "license": "Apache-2.0",
+      "model_config": "config/models/medium.json",
+      "path": "data/assets/aria-medium-gen.safetensors",
+      "repository": "loubb/aria-medium-base",
+      "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+      "sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+      "source_directory": ".third_party/aria",
+      "source_repository": "https://github.com/EleutherAI/aria.git",
+      "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+      "url": "https://huggingface.co/loubb/aria-medium-base/resolve/5a1ef36c5007ee10fbe57d61d96725a7244bd2b2/model-gen.safetensors?download=true",
+      "variant": "generation-finetuned, unmodified weights"
+    },
+    "soundfont": {
+      "license": "GeneralUser GS License v2.0",
+      "license_url": "https://raw.githubusercontent.com/mrbumpy409/GeneralUser-GS/684543d5e5efaef08d02be50dcda8d552478fa60/documentation/LICENSE.txt",
+      "path": "data/assets/GeneralUser-GS-2.0.3.sf2",
+      "revision": "684543d5e5efaef08d02be50dcda8d552478fa60",
+      "sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+      "url": "https://raw.githubusercontent.com/mrbumpy409/GeneralUser-GS/684543d5e5efaef08d02be50dcda8d552478fa60/GeneralUser-GS.sf2",
+      "version": "GeneralUser GS 2.0.3"
+    }
+  },
+  "checks": {
+    "browser": {
+      "advancing_playback_verified": [
+        "prompt",
+        "lstm",
+        "transformer",
+        "aria"
+      ],
+      "all_four_audio_metadata_durations_finite": true,
+      "final_all_players_paused": true,
+      "human_auditory_quality_assessment": false,
+      "page": "outputs/listening/index.html",
+      "reported_media_error_codes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "selected_paths_and_counts_verified": true,
+      "switching_pauses_other_players": true,
+      "url": "http://127.0.0.1:8766/listening/",
+      "visual_layout_inspected": true
+    },
+    "clipped_audio_samples": 0,
+    "merged_note_groups": 0,
+    "pip_check_passed": true,
+    "prompt_and_note_counts_preserved": true,
+    "pytest_passed": 32,
+    "ruff_format_passed": true,
+    "ruff_lint_passed": true,
+    "sample_artifact_hashes_rechecked": true
+  },
+  "date": "2026-10-06",
+  "frozen_training_resume_verification": [
+    {
+      "frozen_source_identity": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+      "run": "lstm-pilot-20261006-001",
+      "strict_checkpoint_load_passed": true,
+      "validation_delta": 0.0
+    },
+    {
+      "frozen_source_identity": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+      "run": "transformer-small-pilot-20261006-001",
+      "strict_checkpoint_load_passed": true,
+      "validation_delta": 0.0
+    }
+  ],
+  "maestro_test_prompts_used": false,
+  "milestone": "MIDI continuation, piano rendering, and pretrained baseline complete",
+  "musical_quality_evaluated": false,
+  "next": [
+    "Human reconstruction listening",
+    "Full-corpus token preparation",
+    "Local MIDI upload/generation application",
+    "Fixed multi-prompt and multi-seed evaluation"
+  ],
+  "pretrained_verification": {
+    "cache_check_passed": true,
+    "cache_check_tolerance": {
+      "atol": 0.25,
+      "rtol": 0.03
+    },
+    "cached_prefill_logit_rmse": 0.008873619139194489,
+    "cached_prefill_max_logit_delta": 0.09375,
+    "finite_logits": true,
+    "gpu": "NVIDIA GeForce RTX 5070",
+    "model": {
+      "backend": "aria",
+      "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+      "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+      "inference": "native PyTorch KV cache, no compilation",
+      "model_config": {
+        "d_model": 1536,
+        "drop_p": 0.0,
+        "ff_mult": 4,
+        "grad_checkpoint": true,
+        "max_seq_len": 8192,
+        "n_heads": 24,
+        "n_layers": 16,
+        "vocab_size": 17727
+      },
+      "parameter_count": 658538496,
+      "repository": "loubb/aria-medium-base",
+      "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+      "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+      "weights_modified": false
+    },
+    "peak_gpu_allocated_bytes": 1370445824,
+    "preprocessing_scope": "Agreement checked on this project-authored prompt; shared wrapper remains explicit for other prompts.",
+    "prompt": {
+      "boundary_ms": 8000,
+      "normalization": {
+        "implicit_initial_tempo_inserted": false,
+        "normalized_note_count": 36,
+        "note_records_changed_by_sustain_or_overlap": 0,
+        "removed_or_merged_notes": 0,
+        "source_note_count": 36,
+        "sustain_messages_consumed": 0
+      },
+      "notes_clipped_at_prompt_boundary": 0,
+      "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+      "prompt_notes": 36,
+      "prompt_tokens": 111,
+      "requested_prompt_seconds": 8,
+      "simultaneous_note_order": "quantized MIDI parser order",
+      "source": "outputs\\prompts\\arpeggio.mid",
+      "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+    },
+    "published_special_ids_match": true,
+    "strict_weight_load_passed": true,
+    "synthetic_prompt_matches_upstream_ids": true,
+    "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+    "torch": "2.14.1+cu130",
+    "vocab_size": 17727
+  },
+  "prompt_scope": "One project-authored engineering fixture and one seed; not a benchmark",
+  "protocol": {
+    "continuation_duration_note": "Onsets bounded; note releases and renderer tails may extend past horizon",
+    "device": "cuda",
+    "export_only_eos": true,
+    "max_new_tokens": 384,
+    "min_p": 0.035,
+    "new_onset_horizon_seconds": 12,
+    "precision": "bf16",
+    "pretrained_casting": "FP32 checkpoint tensors cast to BF16 for inference; no further training or adapters",
+    "prompt_seconds": 8,
+    "sampling": "Shared constrained grammar, temperature and min-p; not upstream Aria sampler",
+    "seed": 42,
+    "temperature": 0.98
+  },
+  "samples": [
+    {
+      "directory": "outputs/generation/lstm-arpeggio-003",
+      "report": {
+        "audio": {
+          "combined": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "4f7f4828408a43ca70f92c88a9062f780c76044402bc5f7b6c2f90fb785be865",
+            "peak": 0.197113037109375,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008414201368226727,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 23.754013605442175,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "47b973f3e05f89fe6fe71f9fe5245aeec9dc0727936704b651ab5ceb8792bb90"
+          },
+          "continuation": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "21e2b3279ed071ce3da0f786035e99b3824ce46bdf0c8b6a18d941adf5393542",
+            "peak": 0.196533203125,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.007460788100565021,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 15.754739229024944,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "18c19df000d4348f6384fbe92878a337fca39a80316eb8744c25af567a4b4290"
+          },
+          "prompt": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "peak": 0.038299560546875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008590334763311728,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 11.04108843537415,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c"
+          }
+        },
+        "device": "cuda",
+        "export": {
+          "combined": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 1,
+            "notes": 81,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\lstm-arpeggio-003\\combined.mid",
+            "serialization_passed": true,
+            "sha256": "4f7f4828408a43ca70f92c88a9062f780c76044402bc5f7b6c2f90fb785be865"
+          },
+          "continuation": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 45,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\lstm-arpeggio-003\\continuation.mid",
+            "serialization_passed": true,
+            "sha256": "21e2b3279ed071ce3da0f786035e99b3824ce46bdf0c8b6a18d941adf5393542"
+          },
+          "continuation_first_onset_seconds": 1.45,
+          "continuation_note_end_seconds": 12.79,
+          "continuation_pitch_range": [
+            37,
+            93
+          ],
+          "export_eos_appended": true,
+          "note_count_preserved": true,
+          "prompt": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 36,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\lstm-arpeggio-003\\prompt.mid",
+            "serialization_passed": true,
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3"
+          },
+          "prompt_preserved": true
+        },
+        "generation_source_sha256": "684de2619cda4d725a7570f8e6004723879a6703e3ff9b2d102be2985e70b869",
+        "min_p": 0.035,
+        "model": {
+          "backend": "lstm",
+          "checkpoint": "runs\\lstm-pilot-20261006-001\\best.pt",
+          "checkpoint_sha256": "f855699e0ffab8d2e7892d633785dd7e6d2bd0a526098f97bb708a97f51f1541",
+          "checkpoint_source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+          "inference": "recurrent cache",
+          "parameter_count": 9620287,
+          "training_valid_tokens": 5030045,
+          "weights_modified": false
+        },
+        "peak_gpu_allocated_bytes": 84010496,
+        "precision": "bf16",
+        "prompt": {
+          "boundary_ms": 8000,
+          "normalization": {
+            "implicit_initial_tempo_inserted": false,
+            "normalized_note_count": 36,
+            "note_records_changed_by_sustain_or_overlap": 0,
+            "removed_or_merged_notes": 0,
+            "source_note_count": 36,
+            "sustain_messages_consumed": 0
+          },
+          "notes_clipped_at_prompt_boundary": 0,
+          "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+          "prompt_notes": 36,
+          "prompt_tokens": 111,
+          "requested_prompt_seconds": 8,
+          "simultaneous_note_order": "quantized MIDI parser order",
+          "source": "outputs\\prompts\\arpeggio.mid",
+          "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+        },
+        "protocol": "shared constrained decoding; native upstream sampler is not used",
+        "quality_evaluated": false,
+        "sampling": {
+          "constraints": {
+            "duplicate_pitch_at_same_onset": "forbidden",
+            "max_simultaneous_note_groups": 32,
+            "monotonic_onsets": true,
+            "new_note_onsets_ms": [
+              8000,
+              20000
+            ],
+            "pitch_range": [
+              21,
+              108
+            ],
+            "positive_velocity_and_duration": true
+          },
+          "generated_note_groups": 45,
+          "new_tokens": 138,
+          "sampled_eos": false,
+          "sampling": "shared syntax/range/density constraints, temperature and min_p",
+          "stop_reason": "time_horizon"
+        },
+        "sampling_seconds": 0.7743865000084043,
+        "seed": 42,
+        "temperature": 0.98,
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+      }
+    },
+    {
+      "directory": "outputs/generation/transformer-arpeggio-003",
+      "report": {
+        "audio": {
+          "combined": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "4bdfca5a7c2078ad080d4f6e9f0a8dc75ae2e84559ea470a2a0ef02a9a6854c8",
+            "peak": 0.197357177734375,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008919929710108864,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 23.54503401360544,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "1fcde788dcfd77c69bef0a9e8e7417523dbf14093a329cab967f231671f85172"
+          },
+          "continuation": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "33a5c2f30403af4599d732997e600d4cd9e5228e35cd2584cd92968105408b48",
+            "peak": 0.193634033203125,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008367000448057405,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 15.545759637188208,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "0002b12d7de2aa97be43e853458b4aedb2bba3d59a973bc0a7accd15e8802163"
+          },
+          "prompt": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "peak": 0.038299560546875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008590334763311728,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 11.04108843537415,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c"
+          }
+        },
+        "device": "cuda",
+        "export": {
+          "combined": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 3,
+            "notes": 112,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\transformer-arpeggio-003\\combined.mid",
+            "serialization_passed": true,
+            "sha256": "4bdfca5a7c2078ad080d4f6e9f0a8dc75ae2e84559ea470a2a0ef02a9a6854c8"
+          },
+          "continuation": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 76,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\transformer-arpeggio-003\\continuation.mid",
+            "serialization_passed": true,
+            "sha256": "33a5c2f30403af4599d732997e600d4cd9e5228e35cd2584cd92968105408b48"
+          },
+          "continuation_first_onset_seconds": 1.45,
+          "continuation_note_end_seconds": 12.1,
+          "continuation_pitch_range": [
+            33,
+            90
+          ],
+          "export_eos_appended": true,
+          "note_count_preserved": true,
+          "prompt": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 36,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\transformer-arpeggio-003\\prompt.mid",
+            "serialization_passed": true,
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3"
+          },
+          "prompt_preserved": true
+        },
+        "generation_source_sha256": "684de2619cda4d725a7570f8e6004723879a6703e3ff9b2d102be2985e70b869",
+        "min_p": 0.035,
+        "model": {
+          "backend": "transformer",
+          "checkpoint": "runs\\transformer-small-pilot-20261006-001\\best.pt",
+          "checkpoint_sha256": "9b20e12e8dc0f69b2c97f626096fe5fc353ab58915effd1116e603767dfbcfb5",
+          "checkpoint_source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+          "inference": "full context recomputation",
+          "parameter_count": 36356608,
+          "training_valid_tokens": 5030045,
+          "weights_modified": false
+        },
+        "peak_gpu_allocated_bytes": 198635520,
+        "precision": "bf16",
+        "prompt": {
+          "boundary_ms": 8000,
+          "normalization": {
+            "implicit_initial_tempo_inserted": false,
+            "normalized_note_count": 36,
+            "note_records_changed_by_sustain_or_overlap": 0,
+            "removed_or_merged_notes": 0,
+            "source_note_count": 36,
+            "sustain_messages_consumed": 0
+          },
+          "notes_clipped_at_prompt_boundary": 0,
+          "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+          "prompt_notes": 36,
+          "prompt_tokens": 111,
+          "requested_prompt_seconds": 8,
+          "simultaneous_note_order": "quantized MIDI parser order",
+          "source": "outputs\\prompts\\arpeggio.mid",
+          "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+        },
+        "protocol": "shared constrained decoding; native upstream sampler is not used",
+        "quality_evaluated": false,
+        "sampling": {
+          "constraints": {
+            "duplicate_pitch_at_same_onset": "forbidden",
+            "max_simultaneous_note_groups": 32,
+            "monotonic_onsets": true,
+            "new_note_onsets_ms": [
+              8000,
+              20000
+            ],
+            "pitch_range": [
+              21,
+              108
+            ],
+            "positive_velocity_and_duration": true
+          },
+          "generated_note_groups": 76,
+          "new_tokens": 231,
+          "sampled_eos": false,
+          "sampling": "shared syntax/range/density constraints, temperature and min_p",
+          "stop_reason": "time_horizon"
+        },
+        "sampling_seconds": 2.935247100016568,
+        "seed": 42,
+        "temperature": 0.98,
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+      }
+    },
+    {
+      "directory": "outputs/generation/aria-arpeggio-002",
+      "report": {
+        "audio": {
+          "combined": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "37c334697b8f257cb3e886a0e4da80c0c4451fe30e8b58e532604a6270a993a9",
+            "peak": 0.0389404296875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.009465405598231901,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 22.952925170068028,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "34402e953fdcc90c00cb74513c4c5737eb5777ccd1a502b4fba1e80e7e40e4a0"
+          },
+          "continuation": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "e1700046e9a1e92b1a869d95921d8782c080cdeafee3384d5369f474731d73d2",
+            "peak": 0.0389404296875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.009136269530223104,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 14.953650793650795,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "a108656a8d51d587ce480e35d6b3c5cff0d8604a8130e82e4c583572283ea810"
+          },
+          "prompt": {
+            "channels": 2,
+            "chorus": false,
+            "clipped_samples": 0,
+            "gain": 0.25,
+            "input_sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3",
+            "peak": 0.038299560546875,
+            "piano_soundfont": true,
+            "polyphony": 256,
+            "renderer": "FluidSynth",
+            "renderer_archive_sha256": "fab7a2e4b85675b66970f97a39bbc239729c5e0f237198b5922a6a73cbc8677c",
+            "reverb": false,
+            "rms": 0.008590334763311728,
+            "sample_format": "PCM16",
+            "sample_rate": 44100,
+            "seconds": 11.04108843537415,
+            "soundfont": "GeneralUser GS 2.0.3",
+            "soundfont_sha256": "9575028c7a1f589f5770fccc8cff2734566af40cd26ed836944e9a5152688cfe",
+            "version": "2.6.1",
+            "wav_sha256": "3c4c3fd48250f7b908e4126cc5e9e88e812b9a22db06edc517b91ec68b013e0c"
+          }
+        },
+        "device": "cuda",
+        "export": {
+          "combined": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 90,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\aria-arpeggio-002\\combined.mid",
+            "serialization_passed": true,
+            "sha256": "37c334697b8f257cb3e886a0e4da80c0c4451fe30e8b58e532604a6270a993a9"
+          },
+          "continuation": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 54,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\aria-arpeggio-002\\continuation.mid",
+            "serialization_passed": true,
+            "sha256": "e1700046e9a1e92b1a869d95921d8782c080cdeafee3384d5369f474731d73d2"
+          },
+          "continuation_first_onset_seconds": 0.0,
+          "continuation_note_end_seconds": 11.96,
+          "continuation_pitch_range": [
+            43,
+            72
+          ],
+          "export_eos_appended": true,
+          "note_count_preserved": true,
+          "prompt": {
+            "independent_parse_passed": true,
+            "note_records_changed_on_export": 0,
+            "notes": 36,
+            "notes_merged_on_export": 0,
+            "path": "outputs\\generation\\aria-arpeggio-002\\prompt.mid",
+            "serialization_passed": true,
+            "sha256": "bc82a75809a33883f965c92d1fee61d24eed72278645ef64ccc239ba9c38ebc3"
+          },
+          "prompt_preserved": true
+        },
+        "generation_source_sha256": "684de2619cda4d725a7570f8e6004723879a6703e3ff9b2d102be2985e70b869",
+        "min_p": 0.035,
+        "model": {
+          "backend": "aria",
+          "checkpoint": "data\\assets\\aria-medium-gen.safetensors",
+          "checkpoint_sha256": "5e6b07ee2680f0044deea30da613d89b12e3e30d012d1812b388d6b8d8306c90",
+          "inference": "native PyTorch KV cache, no compilation",
+          "model_config": {
+            "d_model": 1536,
+            "drop_p": 0.0,
+            "ff_mult": 4,
+            "grad_checkpoint": true,
+            "max_seq_len": 8192,
+            "n_heads": 24,
+            "n_layers": 16,
+            "vocab_size": 17727
+          },
+          "parameter_count": 658538496,
+          "repository": "loubb/aria-medium-base",
+          "revision": "5a1ef36c5007ee10fbe57d61d96725a7244bd2b2",
+          "source_revision": "c2f67bc90b49335543c0249fe00fb84a9337faf8",
+          "weights_modified": false
+        },
+        "peak_gpu_allocated_bytes": 1415142912,
+        "precision": "bf16",
+        "prompt": {
+          "boundary_ms": 8000,
+          "normalization": {
+            "implicit_initial_tempo_inserted": false,
+            "normalized_note_count": 36,
+            "note_records_changed_by_sustain_or_overlap": 0,
+            "removed_or_merged_notes": 0,
+            "source_note_count": 36,
+            "sustain_messages_consumed": 0
+          },
+          "notes_clipped_at_prompt_boundary": 0,
+          "preprocessing": "shared scratch normalization; leading silence retained; quantized notes clipped at prompt boundary",
+          "prompt_notes": 36,
+          "prompt_tokens": 111,
+          "requested_prompt_seconds": 8,
+          "simultaneous_note_order": "quantized MIDI parser order",
+          "source": "outputs\\prompts\\arpeggio.mid",
+          "source_sha256": "0c83a17a0fa638545afc484026f743c312ee33004e2dd1c08ae3e9ac64e1d938"
+        },
+        "protocol": "shared constrained decoding; native upstream sampler is not used",
+        "quality_evaluated": false,
+        "sampling": {
+          "constraints": {
+            "duplicate_pitch_at_same_onset": "forbidden",
+            "max_simultaneous_note_groups": 32,
+            "monotonic_onsets": true,
+            "new_note_onsets_ms": [
+              8000,
+              20000
+            ],
+            "pitch_range": [
+              21,
+              108
+            ],
+            "positive_velocity_and_duration": true
+          },
+          "generated_note_groups": 54,
+          "new_tokens": 165,
+          "sampled_eos": false,
+          "sampling": "shared syntax/range/density constraints, temperature and min_p",
+          "stop_reason": "time_horizon"
+        },
+        "sampling_seconds": 3.2086821000557393,
+        "seed": 42,
+        "temperature": 0.98,
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+      }
+    }
+  ],
+  "source": {
+    "generation_sha256": "684de2619cda4d725a7570f8e6004723879a6703e3ff9b2d102be2985e70b869",
+    "later_change": "Page-builder lint-only edit; sampling code and sample files unchanged",
+    "snapshot": "outputs/generation-source-684de2619cda4d72.zip",
+    "snapshot_sha256": "65fa21af77d0150f1de736731b98acbab4608966548a1b96b0fae4847cf69e40",
+    "training_snapshot": "outputs/training-source-2be60a28e4f5aaa7.zip",
+    "training_snapshot_sha256": "1c55fbcaca04efca9d58224d19308792e1d0970659cd7f100b3f0723ca4eb0b7"
+  },
+  "submission_deadline": "2026-10-13"
+}

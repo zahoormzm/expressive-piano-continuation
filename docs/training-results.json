@@ -1,0 +1,315 @@
+{
+  "accumulation": 16,
+  "audible_quality_evaluated": false,
+  "benchmarks": [
+    {
+      "attention": "cuDNN LSTM",
+      "config": {
+        "data": {
+          "cache": "data\\tokens\\c8ad763cae79f391",
+          "index": "index-fac385b0854fd132-32.jsonl",
+          "limited_pilot": true,
+          "manifest": "data/manifests/maestro-v3-clean.jsonl",
+          "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+          "token_summary": "outputs/tokenization-summary.json",
+          "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+        },
+        "deterministic": false,
+        "device": "cuda",
+        "model": {
+          "dropout": 0.1,
+          "kind": "lstm",
+          "layers": 1,
+          "width": 256
+        },
+        "name": "lstm-pilot",
+        "precision": "bf16",
+        "seed": 42,
+        "training": {
+          "accumulation": 16,
+          "betas": [
+            0.9,
+            0.95
+          ],
+          "checkpoint_every": 20,
+          "context_length": 2048,
+          "gradient_clip": 1.0,
+          "learning_rate": 0.0003,
+          "microbatch": 1,
+          "minimum_lr_fraction": 0.1,
+          "overfit_windows": 0,
+          "token_budget": 5000000,
+          "validation_every": 20,
+          "validation_windows_per_piece": 4,
+          "warmup_fraction": 0.03,
+          "weight_decay": 0.1
+        }
+      },
+      "data_loading_included": true,
+      "gpu": "NVIDIA GeForce RTX 5070",
+      "identity": {
+        "index_sha256": "b323f172f61d4712373d5e740d89506e7443d90b9c00af821f25935b9e910e0a",
+        "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+        "source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+        "validation_windows_sha256": "27c7fcc9155efe9d52dea43569aeb9ea2fe2e8db9b6dd9ec56f8074569338136"
+      },
+      "includes_validation_and_checkpointing": false,
+      "microbatches": 100,
+      "optimizer_updates": 7,
+      "parameter_count": 9620287,
+      "partial_accumulation_note": "Last group may use fewer microbatches; losses remain token-weighted.",
+      "peak_allocated_bytes": 678523904,
+      "peak_reserved_bytes": 788529152,
+      "planned_pilot_compute_seconds": 221.391028676399,
+      "seconds": 8.505887599952985,
+      "tokens_per_second": 22584.474311776918,
+      "torch": "2.14.1+cu130",
+      "valid_tokens": 192101,
+      "warmup": {
+        "microbatches": 20,
+        "optimizer_updates": 2,
+        "seconds": 2.3612389999907464,
+        "valid_tokens": 40415
+      }
+    },
+    {
+      "attention": "PyTorch scaled_dot_product_attention",
+      "config": {
+        "data": {
+          "cache": "data\\tokens\\c8ad763cae79f391",
+          "index": "index-fac385b0854fd132-32.jsonl",
+          "limited_pilot": true,
+          "manifest": "data/manifests/maestro-v3-clean.jsonl",
+          "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+          "token_summary": "outputs/tokenization-summary.json",
+          "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92"
+        },
+        "deterministic": false,
+        "device": "cuda",
+        "model": {
+          "dropout": 0.1,
+          "feedforward": 1536,
+          "gradient_checkpointing": false,
+          "heads": 8,
+          "kind": "transformer",
+          "layers": 8,
+          "tied_embeddings": true,
+          "width": 512
+        },
+        "name": "transformer-small-pilot",
+        "precision": "bf16",
+        "seed": 42,
+        "training": {
+          "accumulation": 16,
+          "betas": [
+            0.9,
+            0.95
+          ],
+          "checkpoint_every": 20,
+          "context_length": 2048,
+          "gradient_clip": 1.0,
+          "learning_rate": 0.0003,
+          "microbatch": 1,
+          "minimum_lr_fraction": 0.1,
+          "overfit_windows": 0,
+          "token_budget": 5000000,
+          "validation_every": 20,
+          "validation_windows_per_piece": 4,
+          "warmup_fraction": 0.03,
+          "weight_decay": 0.1
+        }
+      },
+      "data_loading_included": true,
+      "gpu": "NVIDIA GeForce RTX 5070",
+      "identity": {
+        "index_sha256": "b323f172f61d4712373d5e740d89506e7443d90b9c00af821f25935b9e910e0a",
+        "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+        "source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+        "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+        "validation_windows_sha256": "27c7fcc9155efe9d52dea43569aeb9ea2fe2e8db9b6dd9ec56f8074569338136"
+      },
+      "includes_validation_and_checkpointing": false,
+      "microbatches": 100,
+      "optimizer_updates": 7,
+      "parameter_count": 36356608,
+      "partial_accumulation_note": "Last group may use fewer microbatches; losses remain token-weighted.",
+      "peak_allocated_bytes": 1683598336,
+      "peak_reserved_bytes": 1774190592,
+      "planned_pilot_compute_seconds": 110.10548617597931,
+      "seconds": 4.2302747999783605,
+      "tokens_per_second": 45410.997886232515,
+      "torch": "2.14.1+cu130",
+      "valid_tokens": 192101,
+      "warmup": {
+        "microbatches": 20,
+        "optimizer_updates": 2,
+        "seconds": 1.2878797000157647,
+        "valid_tokens": 40415
+      }
+    }
+  ],
+  "checkpoint_verification": [
+    {
+      "bytes": 115959753,
+      "checkpoint": "best.pt",
+      "loaded_with_weights_only": true,
+      "passed": true,
+      "run": "runs\\lstm-pilot-20261006-001",
+      "sha256": "f855699e0ffab8d2e7892d633785dd7e6d2bd0a526098f97bb708a97f51f1541",
+      "update": 163,
+      "valid_tokens_seen": 5030045,
+      "validation_delta": 0.0,
+      "validation_loss": 6.762089085892148
+    },
+    {
+      "bytes": 115959753,
+      "checkpoint": "latest.pt",
+      "loaded_with_weights_only": true,
+      "passed": true,
+      "run": "runs\\lstm-pilot-20261006-001",
+      "sha256": "f855699e0ffab8d2e7892d633785dd7e6d2bd0a526098f97bb708a97f51f1541",
+      "update": 163,
+      "valid_tokens_seen": 5030045,
+      "validation_delta": 0.0,
+      "validation_loss": 6.762089085892148
+    },
+    {
+      "bytes": 473169505,
+      "checkpoint": "best.pt",
+      "loaded_with_weights_only": true,
+      "passed": true,
+      "run": "runs\\transformer-small-pilot-20261006-001",
+      "sha256": "9b20e12e8dc0f69b2c97f626096fe5fc353ab58915effd1116e603767dfbcfb5",
+      "update": 163,
+      "valid_tokens_seen": 5030045,
+      "validation_delta": 0.0,
+      "validation_loss": 6.075874699243813
+    },
+    {
+      "bytes": 473169505,
+      "checkpoint": "latest.pt",
+      "loaded_with_weights_only": true,
+      "passed": true,
+      "run": "runs\\transformer-small-pilot-20261006-001",
+      "sha256": "9b20e12e8dc0f69b2c97f626096fe5fc353ab58915effd1116e603767dfbcfb5",
+      "update": 163,
+      "valid_tokens_seen": 5030045,
+      "validation_delta": 0.0,
+      "validation_loss": 6.075874699243813
+    }
+  ],
+  "context_length": 2048,
+  "date": "2026-10-06",
+  "deadline": "2026-10-13",
+  "diagnostics": [
+    {
+      "checkpoint_recovery_max_loss_delta": 0.0,
+      "checkpoint_recovery_max_weight_delta": 0.0,
+      "checkpoint_recovery_passed": true,
+      "final_fixed_training_loss": 0.07196413524567134,
+      "initial_fixed_training_loss": 9.82135494171627,
+      "kind": "lstm",
+      "learning_passed": true,
+      "parameter_count": 2320063,
+      "sampler_replay_passed": true,
+      "updates": 250
+    },
+    {
+      "checkpoint_recovery_max_loss_delta": 0.0,
+      "checkpoint_recovery_max_weight_delta": 0.0,
+      "checkpoint_recovery_passed": true,
+      "final_fixed_training_loss": 0.0012531822162961204,
+      "initial_fixed_training_loss": 9.80813937717014,
+      "kind": "transformer",
+      "learning_passed": true,
+      "parameter_count": 1241664,
+      "sampler_replay_passed": true,
+      "updates": 250
+    }
+  ],
+  "full_corpus_training": false,
+  "gpu": "NVIDIA GeForce RTX 5070",
+  "identical_data_and_validation_identities": true,
+  "identical_sampled_token_counts_per_update": true,
+  "lint_and_format_passed": true,
+  "loss_chart": "outputs/training-curves.png",
+  "microbatch": 1,
+  "pip_check_passed": true,
+  "precision": "bf16",
+  "purpose": "Engineering screen on a limited cache; no audible-quality or final full-corpus comparison.",
+  "requested_valid_tokens_per_model": 5000000,
+  "runs": [
+    {
+      "clipped_updates": 6,
+      "final_update_training_loss": 6.886672658915214,
+      "metrics_integrity_passed": true,
+      "run_directory": "runs/lstm-pilot-20261006-001",
+      "summary": {
+        "best_validation_loss": 6.762089085892148,
+        "completed_budget": true,
+        "final_validation_loss": 6.762089085892148,
+        "identity": {
+          "index_sha256": "b323f172f61d4712373d5e740d89506e7443d90b9c00af821f25935b9e910e0a",
+          "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+          "source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+          "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+          "validation_windows_sha256": "27c7fcc9155efe9d52dea43569aeb9ea2fe2e8db9b6dd9ec56f8074569338136"
+        },
+        "initial_validation_loss": 9.78510731744577,
+        "parameter_count": 9620287,
+        "peak_gpu_allocated_bytes": 677733376,
+        "schedule_tokens_seen": 5030045,
+        "training_seconds": 219.93290600029286,
+        "update": 163,
+        "valid_tokens_seen": 5030045
+      },
+      "test_data_used": false,
+      "train_performances": 25,
+      "validation_performances": 2
+    },
+    {
+      "clipped_updates": 7,
+      "final_update_training_loss": 6.270541708397233,
+      "metrics_integrity_passed": true,
+      "run_directory": "runs/transformer-small-pilot-20261006-001",
+      "summary": {
+        "best_validation_loss": 6.075874699243813,
+        "completed_budget": true,
+        "final_validation_loss": 6.075874699243813,
+        "identity": {
+          "index_sha256": "b323f172f61d4712373d5e740d89506e7443d90b9c00af821f25935b9e910e0a",
+          "manifest_sha256": "fac385b0854fd13293b0714e48b311da4b5dc3c9eaac1423c1b3427b47c5ae99",
+          "source_sha256": "2be60a28e4f5aaa70d2cc8ca30a55d8d65c85998541e50e3ddfd96e6f5d8128f",
+          "tokenizer_sha256": "c8ad763cae79f391f9d1a0e7dd63d618a4fc7084a6073f9bfe074b724d7aaf92",
+          "validation_windows_sha256": "27c7fcc9155efe9d52dea43569aeb9ea2fe2e8db9b6dd9ec56f8074569338136"
+        },
+        "initial_validation_loss": 9.880207617247175,
+        "parameter_count": 36356608,
+        "peak_gpu_allocated_bytes": 1679077376,
+        "schedule_tokens_seen": 5030045,
+        "training_seconds": 107.98347310011741,
+        "update": 163,
+        "valid_tokens_seen": 5030045
+      },
+      "test_data_used": false,
+      "train_performances": 25,
+      "validation_performances": 2
+    }
+  ],
+  "source_snapshot": {
+    "path": "outputs/training-source-2be60a28e4f5aaa7.zip",
+    "sha256": "1c55fbcaca04efca9d58224d19308792e1d0970659cd7f100b3f0723ca4eb0b7",
+    "source_identity_verified": true
+  },
+  "status": "scratch-screen-complete",
+  "test_data_used": false,
+  "timing_scope": "Training seconds cover synchronized optimizer-update computation; benchmark timing also includes crop sampling. Neither includes validation/checkpoint writes.",
+  "torch": "2.14.1+cu130",
+  "unit_tests_passed": 24,
+  "validation": {
+    "fixed_windows": 8,
+    "performances": 2,
+    "valid_target_tokens": 16365
+  }
+}
