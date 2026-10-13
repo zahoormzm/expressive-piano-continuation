@@ -6,8 +6,9 @@ Students: Mohammed Zahoor Mashahir (PES1UG24CS579) and Mohammed Ibrahim (PES1UG2
 
 ## Required files
 
-- `project-writeup.pdf`: two-page measured project write-up, matching the body of the assignment summary.
+- `project-writeup.pdf`: two-page explanation of the Transformer choice, architecture, initial training and final post-training stage, matching the body of the assignment summary.
 - `project-writeup-one-page.pdf`: compact alternative because the supplied plan reports a one-page heading and two-page body. Confirm which version faculty accepts.
+- `project-writeup.md`: readable source of the architecture-focused explanation. `tools/build_writeups.py` rebuilds both PDFs with ReportLab and pypdf.
 - `project-slides.pptx`: editable presentation covering the task, implementation, results, live demo, limits and contribution allocation.
 - `contributions.md`: equal allocation of responsibilities and the shared assessment work.
 - `artifacts-manifest.json`: hashes and download locations for the trained models, preparation artifacts and listening evidence in the private release.
